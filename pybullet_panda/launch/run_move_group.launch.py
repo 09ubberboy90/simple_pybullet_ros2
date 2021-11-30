@@ -165,11 +165,11 @@ def generate_launch_description():
     for controller in [
         "panda_arm_controller",
         "panda_hand_controller",
-        "joint_state_broadcaster",
+        # "joint_state_broadcaster", # no need for the broadcaster since i'm doing it myself
     ]:
         load_controllers += [
             ExecuteProcess(
-                cmd=["ros2 run controller_manager spawner.py {}".format(controller)],
+                cmd=["ros2 control load_start_controller {}".format(controller)],
                 shell=True,
                 output="screen",
             )
