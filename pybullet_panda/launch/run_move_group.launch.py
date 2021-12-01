@@ -32,14 +32,13 @@ def load_yaml(package_name, file_path):
 def generate_launch_description():
 
     # planning_context
-    robot_description_config = xacro.process_file(
+    robot_description_config = load_file("pybullet_panda", 
         os.path.join(
-            get_package_share_directory("moveit_resources_panda_moveit_config"),
-            "config",
-            "panda.urdf.xacro",
+            "urdf",
+            "panda.urdf",
         )
     )
-    robot_description = {"robot_description": robot_description_config.toxml()}
+    robot_description = {"robot_description": robot_description_config}
 
     robot_description_semantic_config = load_file(
         "pybullet_panda", "config/panda.srdf"
@@ -68,7 +67,7 @@ def generate_launch_description():
 
     # Trajectory Execution Functionality
     moveit_simple_controllers_yaml = load_yaml(
-        "moveit_resources_panda_moveit_config", "config/panda_controllers.yaml"
+        "pybullet_panda", "config/panda_controllers.yaml"
     )
     moveit_controllers = {
         "moveit_simple_controller_manager": moveit_simple_controllers_yaml,
@@ -143,7 +142,7 @@ def generate_launch_description():
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("moveit_resources_panda_moveit_config"),
+        get_package_share_directory("pybullet_panda"),
         "config",
         "panda_ros_controllers.yaml",
     )

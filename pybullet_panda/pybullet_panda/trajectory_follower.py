@@ -18,7 +18,7 @@ def to_s(duration):
 class TrajectoryFollower:
     """Create and handle the action 'follow_joint_trajectory' server."""
 
-    def __init__(self, robot_id:int, node:Node, controller_name: str):
+    def __init__(self, robot_id:int, node:Node, joints:dict, controller_name: str):
         self.robot_id = robot_id
         self.__node = node
 
@@ -26,9 +26,7 @@ class TrajectoryFollower:
         self.__default_tolerance = 0.05
 
         # Parse motor and position sensors
-        self.__joints = {}
-        for joint_id in range(p.getNumJoints(self.robot_id)):
-            self.__joints[p.getJointInfo(self.robot_id, joint_id)[1].decode()] = joint_id
+        self.__joints = joints
 
         # Initialize trajectory list and action server
         self.__current_point_index = 1

@@ -17,29 +17,37 @@ class PyBulletSim(Node):
         super().__init__('PyBulletSim')
         self.publisher = self.create_publisher(JointState, "/joint_states", 10)
         self.timer = self.create_timer(TIME_STEP, self.step)
-
-        self.physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
-
+        self.physicsClient = p.connect(p.GUI_SERVER)#or p.DIRECT for non-graphical version
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
-        p.setGravity(0,0,-10)
-
+        p.setGravity(0,0,-9.8)
         self.planeId = p.loadURDF("plane.urdf")
         self.startPos = [0,0,0]
         self.flags = p.URDF_ENABLE_CACHED_GRAPHICS_SHAPES
         self.startOrientation = p.getQuaternionFromEuler([0,0,0])
         self.robot_id = p.loadURDF("franka_panda/panda.urdf",self.startPos,self.startOrientation, useFixedBase=True, flags=self.flags)
         self.joints = {}
+        self.hand_joints = {}
         for joint_id in range(p.getNumJoints(self.robot_id)):
-            self.joints[p.getJointInfo(self.robot_id, joint_id)[1].decode()] = joint_id
+            name = p.getJointInfo(self.robot_id, joint_id)[1].decode()
+            if "finger" in name:
+                self.hand_joints[name] = joint_id
+            else:
+                self.joints[name] = joint_id
 
-        self.follower = TrajectoryFollower(self.robot_id, self, "panda_arm_controller")
+        self.follower = TrajectoryFollower(self.robot_id, self, self.joints, "panda_arm_controller")
+        self.follower = TrajectoryFollower(self.robot_id, self, self.hand_joints, "panda_hand_controller")
+        self.joints.update(self.hand_joints)
+        print(p.getBasePositionAndOrientation(self.planeId))
+        p.setRealTimeSimulation(1)
+
 
     def step(self):
-        p.stepSimulation()
+        # p.stepSimulation()
         self.publisher.publish(self.publish())
 
 
     def publish(self) -> JointState:
+
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
         for name, idx in self.joints.items():
