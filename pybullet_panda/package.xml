@@ -16,7 +16,6 @@
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>ros-foxy-ros2-control</exec_depend>
   <exec_depend>ros-foxy-ros2-controllers</exec_depend>
-  <exec_depend>ros-foxy-gripper-controllers</exec_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>warehouse_ros_mongo</exec_depend>

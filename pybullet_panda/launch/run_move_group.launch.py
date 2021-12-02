@@ -192,8 +192,8 @@ def generate_launch_description():
             static_tf,
             robot_state_publisher,
             run_move_group_node,
-            ros2_control_node,
+            # ros2_control_node,
             mongodb_server_node,
         ]
-        + load_controllers
+        # + load_controllers
     )
