@@ -108,7 +108,7 @@ bool SimpleMoveIt::goto_pose(geometry_msgs::msg::Pose pose)
 bool SimpleMoveIt::goto_pose(moveit::planning_interface::MoveGroupInterface *move_group, geometry_msgs::msg::Pose pose)
 {
     move_group->setPoseTarget(pose);
-    return this->wait_for_exec(&this->move_group);
+    return this->wait_for_exec(move_group);
 }
 
 bool SimpleMoveIt::set_obj_active(std::string name, bool set_active)

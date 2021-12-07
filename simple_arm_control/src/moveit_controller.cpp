@@ -129,7 +129,7 @@ int main(int argc, char **argv)
         }
     }
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Going to start pose");
-    simple_moveit->goto_pose(simple_moveit->get_move_group(), start_pose);
+    simple_moveit->goto_pose(start_pose);
     rclcpp::shutdown();
     return 0;
 }
