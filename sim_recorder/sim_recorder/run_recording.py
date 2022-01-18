@@ -46,15 +46,15 @@ except ModuleNotFoundError:
 import _thread
 import threading
 import re
-class Webots():
+class PyBullet():
     def __init__(self):
-        self.name = "webots"
+        self.name = "pybullet"
         self.timeout = 300 # 5 minute
         self.commands = [
-            "ros2 launch webots_driver panda.launch.py",
-            "ros2 launch webots_driver run_move_group.launch.py",
-            "ros2 launch webots_driver collision.launch.py",
-            "ros2 launch webots_driver moveit_controller.launch.py",
+            "ros2 run pybullet_panda panda",
+            "ros2 launch pybullet_panda run_move_group.launch.py",
+            "ros2 launch pybullet_panda collision.launch.py",
+            "ros2 launch pybullet_panda moveit_controller.launch.py",
         ]
         self.delays = [5, 7] # it doesn't matter the timing for the rest it doesn't launch anyway
 
@@ -169,7 +169,7 @@ def main(args=None):
     succ = 0
     fail = 0
 
-    sim = Webots()
+    sim = PyBullet()
 
     if len(sys.argv) == 2:
         iteration = int(sys.argv[1])
