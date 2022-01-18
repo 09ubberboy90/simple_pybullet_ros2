@@ -29,18 +29,28 @@ def load_yaml(package_name, file_path):
 
 def generate_launch_description():
     # planning_context
-    robot_description_config = load_file('moveit_resources_panda_description', 'urdf/panda.urdf')
-    robot_description = {'robot_description': robot_description_config}
+    robot_description_config = load_file("pybullet_panda",
+                                         os.path.join(
+                                             "urdf",
+                                             "panda.urdf",
+                                         )
+                                         )
+    robot_description = {"robot_description": robot_description_config}
 
-    robot_description_semantic_config = load_file('moveit_resources_panda_moveit_config', 'config/panda.srdf')
-    robot_description_semantic = {'robot_description_semantic': robot_description_semantic_config}
+    robot_description_semantic_config = load_file(
+        "pybullet_panda", "config/panda.srdf"
+    )
+    robot_description_semantic = {
+        "robot_description_semantic": robot_description_semantic_config
+    }
 
-    kinematics_yaml = load_yaml('moveit_resources_panda_moveit_config', 'config/kinematics.yaml')
+    kinematics_yaml = load_yaml(
+        "moveit_resources_panda_moveit_config", "config/kinematics.yaml"
+    )
 
-    
     sim_spawner = Node(name='sim_spawner',
                             package='sim_spawner',
-                            executable='sim_spawner',
+                            executable='spawner',
                             output='screen')
 
     moveit_collision = Node(name='moveit_collision',
@@ -49,9 +59,7 @@ def generate_launch_description():
                             output='screen',
                             parameters=[robot_description,
                                         robot_description_semantic,
-                                        kinematics_yaml,
-                                        {"use_spawn_obj": True},
-                                        {"gazebo": False}, {"use_sim_time":False},],
+                                        kinematics_yaml, ],
                             # prefix=['gdbserver localhost:3000'],
                             )
 

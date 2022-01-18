@@ -52,22 +52,25 @@ def generate_launch_description():
     )
     robot_description_kinematics = {"robot_description_kinematics": kinematics_yaml}
 
-    # Planning Functionality
+    # Planning pipeline
     ompl_planning_pipeline_config = {
-        "move_group": {
+        "planning_pipelines": ["ompl"],
+        "default_planning_pipeline": "ompl",
+        "ompl": {
             "planning_plugin": "ompl_interface/OMPLPlanner",
-            "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
-            "start_state_max_bounds_error": 0.1,
-        }
+            "request_adapters": "default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/ResolveConstraintFrames default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints",
+            # TODO: Reduce start_state_max_bounds_error once spawning with specific joint configuration is enabled
+            "start_state_max_bounds_error": 0.31416,
+        },
     }
-    ompl_planning_yaml = load_yaml(
+    _ompl_yaml = load_yaml(
         "moveit_resources_panda_moveit_config", "config/ompl_planning.yaml"
     )
-    ompl_planning_pipeline_config["move_group"].update(ompl_planning_yaml)
+    ompl_planning_pipeline_config["ompl"].update(_ompl_yaml)
 
     # Trajectory Execution Functionality
     moveit_simple_controllers_yaml = load_yaml(
-        "pybullet_panda", "config/panda_controllers.yaml"
+        "webots_driver", "config/panda_controllers.yaml"
     )
     moveit_controllers = {
         "moveit_simple_controller_manager": moveit_simple_controllers_yaml,
@@ -75,7 +78,8 @@ def generate_launch_description():
     }
 
     trajectory_execution = {
-        "moveit_manage_controllers": True,
+        "allow_trajectory_execution": True,
+        "moveit_manage_controllers": False,
         "trajectory_execution.allowed_execution_duration_scaling": 1.2,
         "trajectory_execution.allowed_goal_duration_margin": 0.5,
         "trajectory_execution.allowed_start_tolerance": 0.01,
@@ -140,40 +144,6 @@ def generate_launch_description():
         parameters=[robot_description],
     )
 
-    # ros2_control using FakeSystem as hardware
-    ros2_controllers_path = os.path.join(
-        get_package_share_directory("pybullet_panda"),
-        "config",
-        "panda_ros_controllers.yaml",
-    )
-    ros2_control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_description, ros2_controllers_path],
-        output={
-            "stdout": "screen",
-            "stderr": "screen",
-        },
-        # remappings=[
-        #     ('joint_states', 'joint_states_broadcast'),
-        # ], 
-    )
-
-    # Load controllers
-    load_controllers = []
-    for controller in [
-        "panda_arm_controller",
-        "panda_hand_controller",
-        # "joint_state_broadcaster", # no need for the broadcaster since i'm doing it myself
-    ]:
-        load_controllers += [
-            ExecuteProcess(
-                cmd=["ros2 control load_start_controller {}".format(controller)],
-                shell=True,
-                output="screen",
-            )
-        ]
-
     # Warehouse mongodb server
     mongodb_server_node = Node(
         package="warehouse_ros_mongo",
@@ -192,8 +162,6 @@ def generate_launch_description():
             static_tf,
             robot_state_publisher,
             run_move_group_node,
-            # ros2_control_node,
             mongodb_server_node,
         ]
-        # + load_controllers
     )

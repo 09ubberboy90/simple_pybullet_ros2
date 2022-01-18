@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "sim_spawner = sim_spawner.pybullet_spawner:main",
-            "sim_throw_spawner = sim_spawner.pybullet_throw_spawner:main",
+            "spawner = sim_spawner.spawner:main",
+            "throw_spawner = sim_spawner.throw_spawner:main",
         ],
     },
 )

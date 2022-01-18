@@ -27,8 +27,10 @@ private:
 template <class T>
 ServiceClient<T>::ServiceClient(std::string srv_name)
 {
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Created service with name %s", srv_name.c_str());
-    node = rclcpp::Node::make_shared(srv_name);
+    RCLCPP_INFO(rclcpp::get_logger("service_client"), "Created service with name %s", srv_name.c_str());
+    srand (time(NULL));
+    auto rnd_nb = rand() % 100; 
+    node = rclcpp::Node::make_shared(srv_name + std::to_string(rnd_nb));
     client = node->create_client<T>(srv_name);
 }
 
@@ -40,10 +42,10 @@ std::shared_ptr<typename T::Response> ServiceClient<T>::service_caller(std::shar
     {
         if (!rclcpp::ok())
         {
-            RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+            RCLCPP_ERROR(rclcpp::get_logger("service_client"), "Interrupted while waiting for the service. Exiting.");
             return nullptr;
         }
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+        RCLCPP_INFO(rclcpp::get_logger("service_client"), "service not available, waiting again...");
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
@@ -56,7 +58,7 @@ std::shared_ptr<typename T::Response> ServiceClient<T>::service_caller(std::shar
     }
     else
     {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service");
+        RCLCPP_ERROR(rclcpp::get_logger("service_client"), "Failed to call service");
         return nullptr;
     }
 }

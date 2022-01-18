@@ -35,7 +35,7 @@ class PyBulletSim(Node):
                 self.joints[name] = joint_id
 
         self.follower = TrajectoryFollower(self.robot_id, self, self.joints, "panda_arm_controller")
-        self.follower = TrajectoryFollower(self.robot_id, self, self.hand_joints, "panda_hand_controller")
+        self.hand_follower = TrajectoryFollower(self.robot_id, self, self.hand_joints, "panda_hand_controller")
         self.joints.update(self.hand_joints)
         print(p.getBasePositionAndOrientation(self.planeId))
         p.setRealTimeSimulation(1)

@@ -59,13 +59,19 @@ void get_model_list_handler(std::shared_ptr<ServiceClient<gazebo_msgs::srv::GetM
     auto model_request = model_client->create_request_message();
     auto state_request = state_client->create_request_message();
     auto model_response = model_client->service_caller(model_request);
-    for (auto name : model_response->model_names)
+    if (model_response->success)
     {
-        if (banned.count(name) == 0)
+        for (auto name : model_response->model_names)
         {
-            state_request->name = name;
-            auto state_response = state_client->service_caller(state_request);
-            get_model_state_handler(state_response, states);
+            if (banned.count(name) == 0)
+            {
+                state_request->name = name;
+                auto state_response = state_client->service_caller(state_request);
+                if (state_response->success)
+                {
+                    get_model_state_handler(state_response, states);
+                }
+            }
         }
     }
 }
@@ -86,8 +92,7 @@ int main(int argc, char **argv)
     std::map<std::string, double> obj_height = {};
     rclcpp::NodeOptions node_options;
     node_options.automatically_declare_parameters_from_overrides(true);
-    auto move_group_node = rclcpp::Node::make_shared("moveit_collision", node_options);
-    auto service_node = rclcpp::Node::make_shared("service_handler");
+    auto service_node = rclcpp::Node::make_shared("collision_service_handler");
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("set_target_active_server");
     bool param = true;
     std::string obj_name = "";
@@ -104,20 +109,12 @@ int main(int argc, char **argv)
 
     // For current state monitor
     rclcpp::executors::MultiThreadedExecutor executor;
-    executor.add_node(move_group_node);
     executor.add_node(node);
     std::thread([&executor]()
                 { executor.spin(); })
         .detach();
 
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
-
-    bool thrower;
-    if (!move_group_node->get_parameter("thrower", thrower))
-    {
-        // In case the parameter was not created use default
-        thrower = false;
-    }
 
     while (true)
     {
@@ -142,12 +139,12 @@ int main(int argc, char **argv)
                 obj.operation = obj.ADD;
                 primitive.type = primitive.BOX;
                 primitive.dimensions.resize(3);
-                if (obj.id == "table" && !thrower) // table
+                if (obj.id == "table") // table
                 {
-                    primitive.dimensions[0] = 1.5;
-                    primitive.dimensions[1] = 1;
-                    primitive.dimensions[2] = 0.6;
-                    height = primitive.dimensions[2]; // reason is that rviz uses center of mass while webots table uses bottom position
+                    primitive.dimensions[0] = 0.92;
+                    primitive.dimensions[1] = 0.5;
+                    primitive.dimensions[2] = 0.914;
+                    height = primitive.dimensions[1]; // reason is that rviz uses center of mass while webots table uses bottom position
                 }
                 else // cube
                 {
