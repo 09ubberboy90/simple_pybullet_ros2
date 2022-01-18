@@ -20,33 +20,35 @@ public:
 private:
     std::shared_ptr<rclcpp::Node> node;
     std::shared_ptr<rclcpp::Client<T>> client;
+    std::string srv_name;
 };
 
 // template <> class ServiceClient <>{};
 
 template <class T>
-ServiceClient<T>::ServiceClient(std::string srv_name)
+ServiceClient<T>::ServiceClient(std::string incoming_name)
 {
-    RCLCPP_INFO(rclcpp::get_logger("service_client"), "Created service with name %s", srv_name.c_str());
     srand (time(NULL));
     auto rnd_nb = rand() % 100; 
-    node = rclcpp::Node::make_shared(srv_name + std::to_string(rnd_nb));
+    srv_name = incoming_name;
+    RCLCPP_INFO(rclcpp::get_logger("service_client"), "Created service with name %s", srv_name.c_str());
+    node = rclcpp::Node::make_shared(srv_name + "_" + std::to_string(rnd_nb));
     client = node->create_client<T>(srv_name);
 }
 
 template <class T>
 std::shared_ptr<typename T::Response> ServiceClient<T>::service_caller(std::shared_ptr<typename T::Request> request)
 {
-    std::chrono::seconds timeout(1);
+    std::chrono::milliseconds timeout(500);
     while (!client->wait_for_service(timeout))
     {
         if (!rclcpp::ok())
         {
-            RCLCPP_ERROR(rclcpp::get_logger("service_client"), "Interrupted while waiting for the service. Exiting.");
+            RCLCPP_ERROR(rclcpp::get_logger(srv_name), "Interrupted while waiting for the service. Exiting.");
             return nullptr;
         }
-        RCLCPP_INFO(rclcpp::get_logger("service_client"), "service not available, waiting again...");
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        RCLCPP_INFO(rclcpp::get_logger(srv_name), "service not available, waiting again...");
+        std::this_thread::sleep_for(timeout);
     }
 
     auto result = client->async_send_request(request);
@@ -58,7 +60,7 @@ std::shared_ptr<typename T::Response> ServiceClient<T>::service_caller(std::shar
     }
     else
     {
-        RCLCPP_ERROR(rclcpp::get_logger("service_client"), "Failed to call service");
+        RCLCPP_ERROR(rclcpp::get_logger(srv_name), "Failed to call service");
         return nullptr;
     }
 }

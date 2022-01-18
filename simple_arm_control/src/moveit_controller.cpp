@@ -136,7 +136,9 @@ int main(int argc, char **argv)
         collision_object = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name];
         auto new_pose = collision_object.primitive_poses[0];
 
-        if ((new_pose.position.x < pose.position.x - 0.05) || (pose.position.x + 0.05 < new_pose.position.x))
+        if ((new_pose.position.x < pose.position.x - 0.05) || (pose.position.x + 0.05 < new_pose.position.x) ||
+            (new_pose.position.y < pose.position.y - 0.05) || (pose.position.y + 0.05 < new_pose.position.y)) 
+            // No need to check height since if its in position then it can only be on top of the other cube
         {
             RCLCPP_ERROR(rclcpp::get_logger("panda_moveit_controller"), "Cube is not in bound");
         }

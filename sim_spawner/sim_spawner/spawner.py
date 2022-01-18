@@ -23,23 +23,17 @@ class SpawnerNode(Node):
         self.model = self.create_service(
             GetModelList, 'get_model_list', self.get_model_list)
         self.objs = {}
-        self.spawn_obj("table/table.urdf", offset=[0.6, 0, -0.35], rotation=[ 0, 0, 0.7068252, 0.7073883 ]) #rotate 90 degree around z axis
-        # for i in range(-5,6):
-        #     for j in range(-5,6):
-        #         print(f"Spawned at {i*0.5} {j*0.5}")
-        #         self.spawn_obj("worlds/Cube.wbo", position = [i, 0, j])
-        for x in range(3, 6):
+        self.spawn_obj("table/table.urdf", position=[0.65, 0, -0.35], rotation=[ 0, 0, 0.7068252, 0.7073883 ]) #rotate 90 degree around z axis
+
+        for x in range(2, 5):
             for y in range(-3, 4):
                 self.spawn_obj("cube.urdf", [x/10, y/10, 1], scale=0.05)
 
-    def spawn_obj(self, path, position=[0, 0, 0], offset=[0, 0, 0], rotation = [0,0,0,1], scale = 1):
-        out = []
-        for i, j in zip(position, offset):
-            out.append(i+j)
+    def spawn_obj(self, path, position=[0, 0, 0], rotation = [0,0,0,1], scale = 1):
         name = path.split("/")[-1].split(".")[0]
         if name != "table":
             name += "_" + str(len(self.objs.keys()))
-        self.objs[name] = p.loadURDF(path, basePosition = out, baseOrientation = rotation, globalScaling = scale)
+        self.objs[name] = p.loadURDF(path, basePosition = position, baseOrientation = rotation, globalScaling = scale)
         # p.changeDynamics(self.objs[name], -1, 1/scale) #fix mass
     def get_model_list(self, request: GetModelList.Request, response: GetModelList.Response):
         response.model_names = list(self.objs.keys())

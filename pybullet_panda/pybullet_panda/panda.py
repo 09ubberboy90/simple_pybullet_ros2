@@ -37,7 +37,6 @@ class PyBulletSim(Node):
         self.follower = TrajectoryFollower(self.robot_id, self, self.joints, "panda_arm_controller")
         self.hand_follower = TrajectoryFollower(self.robot_id, self, self.hand_joints, "panda_hand_controller")
         self.joints.update(self.hand_joints)
-        print(p.getBasePositionAndOrientation(self.planeId))
         p.setRealTimeSimulation(1)
 
 
@@ -67,7 +66,6 @@ def main(args=None):
 
     minimal_publisher = PyBulletSim()
     executor = rclpy.executors.MultiThreadedExecutor()
-
 
     rclpy.spin(minimal_publisher, executor=executor)
 

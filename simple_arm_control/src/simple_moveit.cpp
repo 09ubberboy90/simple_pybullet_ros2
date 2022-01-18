@@ -11,6 +11,8 @@ SimpleMoveIt::SimpleMoveIt(std::string node_name) :
     hand_move_group.setNumPlanningAttempts(5);
     move_group.setMaxVelocityScalingFactor(1.0);
     move_group.setMaxAccelerationScalingFactor(1.0);
+    hand_move_group.setMaxVelocityScalingFactor(1.0);
+    hand_move_group.setMaxAccelerationScalingFactor(1.0);
     this->client = std::make_shared<ServiceClient<simple_interface::srv::SetObjectActive>>("set_target_active");
 }
 
@@ -21,7 +23,7 @@ bool SimpleMoveIt::wait_for_exec(moveit::planning_interface::MoveGroupInterface 
     {
         // 10 tries to plan otherwise give up
         bool success = (move_group->plan(plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Plan %d %s", i, success ? "SUCCEEDED" : "FAILED");
+        RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Plan %d %s", i, success ? "SUCCEEDED" : "FAILED");
 
         if (success)
         {
@@ -30,17 +32,17 @@ bool SimpleMoveIt::wait_for_exec(moveit::planning_interface::MoveGroupInterface 
         }
     }
     auto pose = move_group->getPoseTarget().pose.position;
-    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to find a valid path to %f, %f, %f", pose.x, pose.y, pose.z);
+    RCLCPP_ERROR(rclcpp::get_logger("simple_moveit"), "Failed to find a valid path to %f, %f, %f", pose.x, pose.y, pose.z);
     return false;
 }
 bool SimpleMoveIt::pick(std::string name, geometry_msgs::msg::Pose pose, double approach_distance)
 {
     bool success = true;
     //open gripper
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Opening hand");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Opening hand");
     success = this->change_gripper(gripper_state::opened);
     // aproach
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Approaching");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Approaching");
     pose.position.z += approach_distance;
     success = this->goto_pose(pose);
     //remove collision object
@@ -52,10 +54,10 @@ bool SimpleMoveIt::pick(std::string name, geometry_msgs::msg::Pose pose, double 
     pose.position.z -= approach_distance;
     success = this->goto_pose(pose);
     //grip
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Closing Hand");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Closing Hand");
     success = this->change_gripper(gripper_state::closed);
     //lift
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Retracting");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Retracting");
     pose.position.z += approach_distance;
     success = this->goto_pose(pose);
 
@@ -66,19 +68,19 @@ bool SimpleMoveIt::place(std::string name, geometry_msgs::msg::Pose pose, double
 {
     bool success = true;
     // aproach
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Approaching");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Approaching");
     pose.position.z += approach_distance;
     success = this->goto_pose(pose);
     //go in position
     pose.position.z -= approach_distance;
     success = this->goto_pose(pose);
     //grip
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Opening Hand");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Opening Hand");
     success = this->change_gripper(gripper_state::opened);
     //remove collision object
     success = this->set_obj_active(name, true);
     //lift
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Retracting");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Retracting");
     pose.position.z += approach_distance;
     success = this->goto_pose(pose);
 
@@ -117,6 +119,6 @@ bool SimpleMoveIt::set_obj_active(std::string name, bool set_active)
     request->data = set_active;
     request->name = name;
     auto response = this->client->service_caller(request);
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Obj %s set %s %s", name.c_str(), set_active ? "active" : "inactive", response->success ? "successfully" : "unsuccessfully");
+    RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Obj %s set %s %s", name.c_str(), set_active ? "active" : "inactive", response->success ? "successfully" : "unsuccessfully");
     return response->success;
 }

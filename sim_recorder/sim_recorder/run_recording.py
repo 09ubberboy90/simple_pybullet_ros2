@@ -52,11 +52,11 @@ class PyBullet():
         self.timeout = 300 # 5 minute
         self.commands = [
             "ros2 run pybullet_panda panda",
-            "ros2 launch pybullet_panda run_move_group.launch.py",
             "ros2 launch pybullet_panda collision.launch.py",
+            "ros2 launch pybullet_panda run_move_group.launch.py",
             "ros2 launch pybullet_panda moveit_controller.launch.py",
         ]
-        self.delays = [5, 7] # it doesn't matter the timing for the rest it doesn't launch anyway
+        self.delays = [5, 5, 7] # it doesn't matter the timing for the rest it doesn't launch anyway
 
 
 
