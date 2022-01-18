@@ -1,0 +1,1271 @@
+[INFO] [launch]: All log files can be found below /workspaces/Webots/ubb/.ros/log/2022-01-17-18-05-28-868253-tubao-81256
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [panda.wbt" --batch --mode=realtime-1]: process started with pid [81265]
+[INFO] [driver-2]: process started with pid [81267]
+[INFO] [robot_state_publisher-3]: process started with pid [81270]
+[robot_state_publisher-3] [37;1m2022-01-17 18:05:29.018 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment fastrtps_c35a7f0ebaf921dc: No such file or directory[34;1m -> Function [36mSegment[m
+[robot_state_publisher-3] [37;1m2022-01-17 18:05:29.018 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mNo such file or directory[34;1m -> Function [36minit[m
+[driver-2] Cannot open file: /tmp/webots-81269-OcGP86/WEBOTS_SERVER (retry count 1)
+[robot_state_publisher-3] Parsing robot urdf xml string.
+[robot_state_publisher-3] Link panda_link0 had 1 children
+[robot_state_publisher-3] Link panda_link1 had 1 children
+[robot_state_publisher-3] Link panda_link2 had 1 children
+[robot_state_publisher-3] Link panda_link3 had 1 children
+[robot_state_publisher-3] Link panda_link4 had 1 children
+[robot_state_publisher-3] Link panda_link5 had 1 children
+[robot_state_publisher-3] Link panda_link6 had 1 children
+[robot_state_publisher-3] Link panda_link7 had 1 children
+[robot_state_publisher-3] Link panda_link8 had 1 children
+[robot_state_publisher-3] Link panda_hand had 2 children
+[robot_state_publisher-3] Link panda_leftfinger had 0 children
+[robot_state_publisher-3] Link panda_rightfinger had 0 children
+[robot_state_publisher-3] [INFO] [1642442729.024149099] [robot_state_publisher]: got segment panda_hand
+[robot_state_publisher-3] [INFO] [1642442729.024202730] [robot_state_publisher]: got segment panda_leftfinger
+[robot_state_publisher-3] [INFO] [1642442729.024207990] [robot_state_publisher]: got segment panda_link0
+[robot_state_publisher-3] [INFO] [1642442729.024211750] [robot_state_publisher]: got segment panda_link1
+[robot_state_publisher-3] [INFO] [1642442729.024215300] [robot_state_publisher]: got segment panda_link2
+[robot_state_publisher-3] [INFO] [1642442729.024218750] [robot_state_publisher]: got segment panda_link3
+[robot_state_publisher-3] [INFO] [1642442729.024222240] [robot_state_publisher]: got segment panda_link4
+[robot_state_publisher-3] [INFO] [1642442729.024225680] [robot_state_publisher]: got segment panda_link5
+[robot_state_publisher-3] [INFO] [1642442729.024229140] [robot_state_publisher]: got segment panda_link6
+[robot_state_publisher-3] [INFO] [1642442729.024232580] [robot_state_publisher]: got segment panda_link7
+[robot_state_publisher-3] [INFO] [1642442729.024235880] [robot_state_publisher]: got segment panda_link8
+[robot_state_publisher-3] [INFO] [1642442729.024239280] [robot_state_publisher]: got segment panda_rightfinger
+[robot_state_publisher-3] [INFO] [1642442729.024242750] [robot_state_publisher]: got segment world
+[panda.wbt" --batch --mode=realtime-1] Warning: QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubb'
+[driver-2] Cannot open file: /tmp/webots-81269-OcGP86/WEBOTS_SERVER (retry count 2)
+[driver-2] Cannot open file: /tmp/webots-81269-OcGP86/WEBOTS_SERVER (retry count 3)
+[panda.wbt" --batch --mode=realtime-1] AL lib: (WW) alc_initconfig: Failed to initialize backend "pulse"
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[driver-2] Cannot open file: /tmp/webots-81269-OcGP86/WEBOTS_SERVER (retry count 4)
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+[panda.wbt" --batch --mode=realtime-1] ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+[panda.wbt" --batch --mode=realtime-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[driver-2] Cannot open file: /tmp/webots-81269-OcGP86/WEBOTS_SERVER (retry count 5)
+[INFO] [launch]: All log files can be found below /workspaces/Webots/ubb/.ros/log/2022-01-17-18-05-33-836861-tubao-81430
+[INFO] [launch]: Default logging verbosity is set to INFO
+[robot_state_publisher-3] Parsing robot urdf xml string.
+[robot_state_publisher-3] Link panda_link1 had 1 children
+[robot_state_publisher-3] Link panda_link2 had 1 children
+[robot_state_publisher-3] Link panda_link3 had 1 children
+[robot_state_publisher-3] Link panda_link4 had 1 children
+[robot_state_publisher-3] Link panda_link5 had 1 children
+[robot_state_publisher-3] Link panda_link6 had 1 children
+[robot_state_publisher-3] Link panda_link7 had 1 children
+[robot_state_publisher-3] Link panda_link8 had 1 children
+[robot_state_publisher-3] Link panda_hand had 2 children
+[robot_state_publisher-3] Link panda_leftfinger had 0 children
+[robot_state_publisher-3] Link panda_rightfinger had 0 children
+[robot_state_publisher-3] [INFO] [1642442734.049579253] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-3] [INFO] [1642442734.049612703] [robot_state_publisher]: got segment panda_hand
+[robot_state_publisher-3] [INFO] [1642442734.049621633] [robot_state_publisher]: got segment panda_leftfinger
+[robot_state_publisher-3] [INFO] [1642442734.049628844] [robot_state_publisher]: got segment panda_link1
+[robot_state_publisher-3] [INFO] [1642442734.049635684] [robot_state_publisher]: got segment panda_link2
+[robot_state_publisher-3] [INFO] [1642442734.049642524] [robot_state_publisher]: got segment panda_link3
+[robot_state_publisher-3] [INFO] [1642442734.049649264] [robot_state_publisher]: got segment panda_link4
+[robot_state_publisher-3] [INFO] [1642442734.049656024] [robot_state_publisher]: got segment panda_link5
+[robot_state_publisher-3] [INFO] [1642442734.049662774] [robot_state_publisher]: got segment panda_link6
+[robot_state_publisher-3] [INFO] [1642442734.049669524] [robot_state_publisher]: got segment panda_link7
+[robot_state_publisher-3] [INFO] [1642442734.049676254] [robot_state_publisher]: got segment panda_link8
+[robot_state_publisher-3] [INFO] [1642442734.049682994] [robot_state_publisher]: got segment panda_rightfinger
+[INFO] [rviz2-1]: process started with pid [81440]
+[INFO] [static_transform_publisher-2]: process started with pid [81442]
+[INFO] [move_group-3]: process started with pid [81444]
+[INFO] [mongo_wrapper_ros.py-4]: process started with pid [81446]
+[INFO] [ros2 control load_start_controller panda_arm_controller-5]: process started with pid [81448]
+[INFO] [ros2 control load_start_controller panda_hand_controller-6]: process started with pid [81450]
+[INFO] [ros2 control load_start_controller joint_state_broadcaster-7]: process started with pid [81453]
+[static_transform_publisher-2] [INFO] [1642442734.107132777] [static_transform_publisher]: Spinning until killed publishing transform from 'world' to 'base_link'
+[rviz2-1] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubb'
+[move_group-3] [37;1m2022-01-17 18:05:34.121 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 187b142b527504d1: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[move_group-3] [37;1m2022-01-17 18:05:34.121 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[move_group-3] Parsing robot urdf xml string.
+[move_group-3] [INFO] [1642442734.140731081] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.00103921 seconds
+[move_group-3] [INFO] [1642442734.140796852] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[move_group-3] [WARN] [1642442734.140810212] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'panda_link0' does not match the URDF frame 'world'
+[move_group-3] [INFO] [1642442734.140816352] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[move_group-3] Link panda_link0 had 1 children
+[move_group-3] Link panda_link1 had 1 children
+[move_group-3] Link panda_link2 had 1 children
+[move_group-3] Link panda_link3 had 1 children
+[move_group-3] Link panda_link4 had 1 children
+[move_group-3] Link panda_link5 had 1 children
+[move_group-3] Link panda_link6 had 1 children
+[move_group-3] Link panda_link7 had 1 children
+[move_group-3] Link panda_link8 had 1 children
+[move_group-3] Link panda_hand had 2 children
+[move_group-3] Link panda_leftfinger had 0 children
+[move_group-3] Link panda_rightfinger had 0 children
+[move_group-3] [INFO] [1642442734.158714197] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-3] [INFO] [1642442734.158846339] [moveit.ros_planning_interface.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-3] [INFO] [1642442734.159274774] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-3] [INFO] [1642442734.159473157] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-3] [INFO] [1642442734.159484707] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[move_group-3] [INFO] [1642442734.159631649] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-3] [INFO] [1642442734.159641179] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-3] [INFO] [1642442734.159801411] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-3] [INFO] [1642442734.159943973] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-3] [WARN] [1642442734.159970883] [moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-3] [ERROR] [1642442734.159993713] [moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-3] [INFO] [1642442734.160559920] [moveit.ros_planning_interface.moveit_cpp]: Loading planning pipeline 'ompl'
+[move_group-3] [INFO] [1642442734.179832713] [moveit.ros_planning.planning_pipeline]: Using planning interface 'OMPL'
+[move_group-3] [INFO] [1642442734.181314161] [moveit_ros.add_time_optimal_parameterization]: Param 'ompl.path_tolerance' was not set. Using default value: 0.100000
+[move_group-3] [INFO] [1642442734.181325542] [moveit_ros.add_time_optimal_parameterization]: Param 'ompl.resample_dt' was not set. Using default value: 0.100000
+[move_group-3] [INFO] [1642442734.181329142] [moveit_ros.add_time_optimal_parameterization]: Param 'ompl.min_angle_change' was not set. Using default value: 0.001000
+[move_group-3] [INFO] [1642442734.181346402] [moveit_ros.fix_workspace_bounds]: Param 'ompl.default_workspace_bounds' was not set. Using default value: 10.000000
+[move_group-3] [INFO] [1642442734.181358902] [moveit_ros.fix_start_state_bounds]: Param 'ompl.start_state_max_bounds_error' was set to 0.050000
+[move_group-3] [INFO] [1642442734.181363342] [moveit_ros.fix_start_state_bounds]: Param 'ompl.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-3] [INFO] [1642442734.181371562] [moveit_ros.fix_start_state_collision]: Param 'ompl.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-3] [INFO] [1642442734.181375182] [moveit_ros.fix_start_state_collision]: Param 'ompl.jiggle_fraction' was not set. Using default value: 0.020000
+[move_group-3] [INFO] [1642442734.181383452] [moveit_ros.fix_start_state_collision]: Param 'ompl.max_sampling_attempts' was not set. Using default value: 100
+[move_group-3] [INFO] [1642442734.181391652] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Add Time Optimal Parameterization'
+[move_group-3] [INFO] [1642442734.181399652] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Resolve constraint frames to robot links'
+[move_group-3] [INFO] [1642442734.181402182] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Workspace Bounds'
+[move_group-3] [INFO] [1642442734.181404633] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Bounds'
+[move_group-3] [INFO] [1642442734.181406903] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State In Collision'
+[move_group-3] [INFO] [1642442734.181439663] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Path Constraints'
+[mongo_wrapper_ros.py-4] [37;1m2022-01-17 18:05:34.186 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 639c196fafcfb002: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[mongo_wrapper_ros.py-4] [37;1m2022-01-17 18:05:34.186 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[mongo_wrapper_ros.py-4] [INFO] [1642442734.234373350] [mongodb]: Starting mongodb with db location /tmp/db listening on localhost:33829
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] MongoDB starting : pid=81505 port=33829 dbpath=/tmp/db 64-bit host=tubao
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] db version v3.6.8
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] modules: none
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] build environment:
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten]     distarch: x86_64
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I CONTROL  [initandlisten] options: { net: { port: 33829 }, storage: { dbPath: "/tmp/db" } }
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 W -        [initandlisten] Detected unclean shutdown - /tmp/db/mongod.lock is not empty.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I -        [initandlisten] Detected data files in /tmp/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.249+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15505M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+[driver-2] [INFO] [1642442734.439727145] [controller_manager]: Loading controller 'panda_arm_controller'
+[ros2 control load_start_controller panda_arm_controller-5] [37;1m2022-01-17 18:05:34.400 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 386bcaa455e9b68a: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[ros2 control load_start_controller panda_arm_controller-5] [37;1m2022-01-17 18:05:34.400 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[driver-2] [INFO] [1642442734.477001784] [controller_manager]: Configuring controller 'panda_arm_controller'
+[driver-2] [INFO] [1642442734.477132546] [panda_arm_controller]: Command interfaces are [position] and and state interfaces are [position].
+[driver-2] [INFO] [1642442734.478273590] [panda_arm_controller]: Controller state will be published at 50.00 Hz.
+[driver-2] [INFO] [1642442734.479285203] [panda_arm_controller]: Action status changes will be monitored at 20.00 Hz.
+[driver-2] [INFO] [1642442734.533927481] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[driver-2] [INFO] [1642442734.560782199] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[driver-2] [INFO] [1642442734.678825516] [controller_manager]: Loading controller 'panda_hand_controller'
+[driver-2] [INFO] [1642442734.700718281] [controller_manager]: Configuring controller 'panda_hand_controller'
+[driver-2] [INFO] [1642442734.700798242] [panda_hand_controller]: Command interfaces are [position] and and state interfaces are [position].
+[ros2 control load_start_controller joint_state_broadcaster-7] [37;1m2022-01-17 18:05:34.411 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 2453f4c1f9299f67: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[driver-2] [INFO] [1642442734.701247658] [panda_hand_controller]: Controller state will be published at 50.00 Hz.
+[ros2 control load_start_controller joint_state_broadcaster-7] [37;1m2022-01-17 18:05:34.411 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[driver-2] [INFO] [1642442734.701665103] [panda_hand_controller]: Action status changes will be monitored at 20.00 Hz.
+[ros2 control load_start_controller joint_state_broadcaster-7] deprecated warning: Please use 'load_controller --set_state start'
+[ros2 control load_start_controller joint_state_broadcaster-7] Successfully loaded and started controller joint_state_broadcaster
+[INFO] [ros2 control load_start_controller panda_arm_controller-5]: process has finished cleanly [pid 81448]
+[INFO] [ros2 control load_start_controller joint_state_broadcaster-7]: process has finished cleanly [pid 81453]
+[INFO] [ros2 control load_start_controller panda_hand_controller-6]: process has finished cleanly [pid 81450]
+[ros2 control load_start_controller panda_hand_controller-6] [37;1m2022-01-17 18:05:34.414 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 20bd403e568f3fd3: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[ros2 control load_start_controller panda_hand_controller-6] [37;1m2022-01-17 18:05:34.414 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[ros2 control load_start_controller panda_hand_controller-6] deprecated warning: Please use 'load_controller --set_state start'
+[ros2 control load_start_controller panda_hand_controller-6] Successfully loaded and started controller panda_hand_controller
+[move_group-3] [INFO] [1642442734.482675725] [moveit.plugins.moveit_simple_controller_manager]: Added FollowJointTrajectory controller for panda_arm_controller
+[move_group-3] [INFO] [1642442734.784823549] [moveit.plugins.moveit_simple_controller_manager]: Added FollowJointTrajectory controller for panda_hand_controller
+[move_group-3] [INFO] [1642442734.785015291] [moveit.plugins.moveit_simple_controller_manager]: Returned 2 controllers in list
+[move_group-3] [INFO] [1642442734.785931853] [moveit_ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[move_group-3] [INFO] [1642442734.785954443] [move_group.move_group]: MoveGroup debug mode is ON
+[move_group-3] [INFO] [1642442734.797624311] [move_group.move_group]: 
+[move_group-3] 
+[move_group-3] ********************************************************
+[move_group-3] * MoveGroup using: 
+[move_group-3] *     - ApplyPlanningSceneService
+[move_group-3] *     - ClearOctomapService
+[move_group-3] *     - CartesianPathService
+[move_group-3] *     - ExecuteTrajectoryAction
+[move_group-3] *     - GetPlanningSceneService
+[move_group-3] *     - KinematicsService
+[move_group-3] *     - MoveAction
+[move_group-3] *     - MotionPlanService
+[move_group-3] *     - QueryPlannersService
+[move_group-3] *     - StateValidationService
+[move_group-3] ********************************************************
+[move_group-3] 
+[move_group-3] [INFO] [1642442734.797663471] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[move_group-3] [INFO] [1642442734.797671681] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context initialization complete
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.484+0000 I STORAGE  [initandlisten] WiredTiger message [1642442734:484141][81505:0x7f742542ff40], txn-recover: Main recovery loop: starting at 80/256
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.484+0000 I STORAGE  [initandlisten] WiredTiger message [1642442734:484379][81505:0x7f742542ff40], txn-recover: Recovering log 80 through 81
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.510+0000 I STORAGE  [initandlisten] WiredTiger message [1642442734:510707][81505:0x7f742542ff40], file:index-3-424777284686770485.wt, txn-recover: Recovering log 81 through 81
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.530+0000 I STORAGE  [initandlisten] WiredTiger message [1642442734:530291][81505:0x7f742542ff40], file:index-3-424777284686770485.wt, txn-recover: Set global recovery timestamp: 0
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] 
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] 
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.559+0000 I CONTROL  [initandlisten] 
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.569+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/tmp/db/diagnostic.data'
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:34.570+0000 I NETWORK  [initandlisten] waiting for connections on port 33829
+[mongo_wrapper_ros.py-4] 2022-01-17T18:05:35.012+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+[ros2 control load_start_controller panda_arm_controller-5] deprecated warning: Please use 'load_controller --set_state start'
+[ros2 control load_start_controller panda_arm_controller-5] Successfully loaded and started controller panda_arm_controller
+[move_group-3] [96mLoading 'move_group/ApplyPlanningSceneService'...
+[move_group-3] [0m[96mLoading 'move_group/ClearOctomapService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupGetPlanningSceneService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupKinematicsService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupMoveAction'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupPlanService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupQueryPlannersService'...
+[move_group-3] [0m[96mLoading 'move_group/MoveGroupStateValidationService'...
+[move_group-3] [0m[92m
+[move_group-3] You can start planning now!
+[move_group-3] 
+[rviz2-1] [INFO] [1642442735.095141647] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-1] [INFO] [1642442735.095322549] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-1] [INFO] [1642442735.268191555] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-1] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occured with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-1]          at line 253 in /opt/ros/foxy/include/class_loader/class_loader_core.hpp
+[rviz2-1] [ERROR] [1642442738.354185577] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-1] Parsing robot urdf xml string.
+[rviz2-1] [INFO] [1642442738.368272045] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.00118322 seconds
+[rviz2-1] [INFO] [1642442738.368332336] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[rviz2-1] [WARN] [1642442738.368347066] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'panda_link0' does not match the URDF frame 'world'
+[rviz2-1] [INFO] [1642442738.368351946] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-1] [ERROR] [1642442738.992182479] [rviz2]: PluginlibFactory: The plugin for class 'rviz_visual_tools/RvizVisualToolsGui' failed to load. Error: According to the loaded plugin descriptions the class rviz_visual_tools/RvizVisualToolsGui with base class type rviz_common::Panel does not exist. Declared types are 
+[rviz2-1] Parsing robot urdf xml string.
+[rviz2-1] Parsing robot urdf xml string.
+[rviz2-1] [INFO] [1642442739.054666107] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.00115671 seconds
+[rviz2-1] [INFO] [1642442739.054697987] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[rviz2-1] [WARN] [1642442739.054705287] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'panda_link0' does not match the URDF frame 'world'
+[rviz2-1] [INFO] [1642442739.054711137] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-1] [INFO] [1642442739.054871900] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.00135489 seconds
+[rviz2-1] [INFO] [1642442739.054907650] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[rviz2-1] [WARN] [1642442739.054915360] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'panda_link0' does not match the URDF frame 'world'
+[rviz2-1] [INFO] [1642442739.054923450] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-1] [ERROR] [1642442739.067768261] [kinematics_plugin_loader]: The kinematics plugin (panda_arm) failed to load. Error: MultiLibraryClassLoader: Could not create object of class type kdl_kinematics_plugin::KDLKinematicsPlugin as no factory exists for it. Make sure that the library exists and was explicitly loaded through MultiLibraryClassLoader::loadLibrary()
+[rviz2-1] [ERROR] [1642442739.067780421] [moveit_ros.robot_model_loader]: Kinematics solver could not be instantiated for joint group panda_arm.
+[rviz2-1] Link panda_link0 had 1 children
+[rviz2-1] Link panda_link1 had 1 children
+[rviz2-1] Link panda_link2 had 1 children
+[rviz2-1] Link panda_link3 had 1 children
+[rviz2-1] Link panda_link4 had 1 children
+[rviz2-1] Link panda_link5 had 1 children
+[rviz2-1] Link panda_link6 had 1 children
+[rviz2-1] Link panda_link7 had 1 children
+[rviz2-1] Link panda_link8 had 1 children
+[rviz2-1] Link panda_hand had 2 children
+[rviz2-1] Link panda_leftfinger had 0 children
+[rviz2-1] Link panda_rightfinger had 0 children
+[rviz2-1] [WARN] [1642442739.069069507] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[rviz2-1] [INFO] [1642442739.106820542] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-1] [INFO] [1642442739.107441520] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[rviz2-1] [INFO] [1642442739.115001696] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-1] [INFO] [1642442739.115541833] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[rviz2-1] [INFO] [1642442739.127687305] [interactive_marker_display_94235789234560]: Connected on namespace: rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+[rviz2-1] Link panda_link0 had 1 children
+[rviz2-1] Link panda_link1 had 1 children
+[rviz2-1] Link panda_link2 had 1 children
+[rviz2-1] Link panda_link3 had 1 children
+[rviz2-1] Link panda_link4 had 1 children
+[rviz2-1] Link panda_link5 had 1 children
+[rviz2-1] Link panda_link6 had 1 children
+[rviz2-1] Link panda_link7 had 1 children
+[rviz2-1] Link panda_link8 had 1 children
+[rviz2-1] Link panda_hand had 2 children
+[rviz2-1] Link panda_leftfinger had 0 children
+[rviz2-1] Link panda_rightfinger had 0 children
+[rviz2-1] [WARN] [1642442739.136195543] [moveit_robot_model.joint_model_group]: comparing input tip: panda_link8 to this groups tip: panda_link8 
+[rviz2-1] [INFO] [1642442739.138070846] [moveit_ros_visualization.motion_planning_frame]: group panda_arm
+[rviz2-1] [INFO] [1642442739.138090907] [moveit_ros_visualization.motion_planning_frame]: Constructing new MoveGroup connection for group 'panda_arm' in namespace ''
+[rviz2-1] [WARN] [1642442739.138351770] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[rviz2-1] [INFO] [1642442739.151410805] [move_group_interface]: Ready to take commands for planning group panda_arm.
+[rviz2-1] [INFO] [1642442739.151453755] [move_group_interface]: Looking around: no
+[rviz2-1] [INFO] [1642442739.151465075] [move_group_interface]: Replanning: no
+[rviz2-1] [INFO] [1642442739.154246550] [interactive_marker_display_94235789234560]: Sending request for interactive markers
+[rviz2-1] [INFO] [1642442739.169212119] [moveit_ros_visualization.motion_planning_frame_planning]: POPULATING PLANNERS 75 grp: panda_arm
+[rviz2-1] [INFO] [1642442739.169297760] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand
+[rviz2-1] [INFO] [1642442739.169303200] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[BFMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169305660] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[BKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169307760] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[BiESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169310000] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[BiTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169312020] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[ESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169313970] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[FMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169315940] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[KPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169317900] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[LBKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169319850] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[LBTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169321810] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[LazyPRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169325070] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[LazyPRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169327100] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[PDSTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169329060] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[PRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169331020] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[PRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169332980] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[ProjESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169334920] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[RRTConnectkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169336871] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[RRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169338821] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[RRTstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169340781] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[SBLkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169342741] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[SPARSkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169344671] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[SPARStwokConfigDefault]
+[rviz2-1] [INFO] [1642442739.169346621] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[STRIDEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169348581] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[TRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169350531] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: hand[TrajOptDefault]
+[rviz2-1] [INFO] [1642442739.169352561] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm
+[rviz2-1] [INFO] [1642442739.169378591] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[BFMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169433672] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[BKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169438802] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[BiESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169441662] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[BiTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169444542] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[ESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169447512] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[FMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169450692] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[KPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169453522] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[LBKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169456462] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[LBTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169459842] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[LazyPRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169462792] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[LazyPRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169465592] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[PDSTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169468632] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[PRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169471572] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[PRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169474502] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[ProjESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169477432] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[RRTConnectkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169480772] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[RRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169483702] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[RRTstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169486482] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[SBLkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169489352] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[SPARSkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169492242] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[SPARStwokConfigDefault]
+[rviz2-1] [INFO] [1642442739.169494982] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[STRIDEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169497903] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[TRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169500713] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm[TrajOptDefault]
+[rviz2-1] [INFO] [1642442739.169503623] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand
+[rviz2-1] [INFO] [1642442739.169505783] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[BFMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169507763] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[BKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169509773] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[BiESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169511763] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[BiTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169513733] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[ESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169515683] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[FMTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169524073] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[KPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169526243] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[LBKPIECEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169528233] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[LBTRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169530183] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[LazyPRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169532143] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[LazyPRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169534103] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[PDSTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169536053] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[PRMkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169538013] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[PRMstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169539963] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[ProjESTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169541893] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[RRTConnectkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169543833] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[RRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169545813] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[RRTstarkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169547743] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[SBLkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169549703] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[SPARSkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169551673] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[SPARStwokConfigDefault]
+[rviz2-1] [INFO] [1642442739.169554233] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[STRIDEkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169556203] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[TRRTkConfigDefault]
+[rviz2-1] [INFO] [1642442739.169558163] [moveit_ros_visualization.motion_planning_frame_planning]: planner id: panda_arm_hand[TrajOptDefault]
+[rviz2-1] [INFO] [1642442739.179697420] [interactive_marker_display_94235789234560]: Service response received for initialization
+[INFO] [launch]: All log files can be found below /workspaces/Webots/ubb/.ros/log/2022-01-17-18-05-40-854652-tubao-81727
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: All log files can be found below /workspaces/Webots/ubb/.ros/log/2022-01-17-18-05-40-857337-tubao-81726
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [spawner-1]: process started with pid [81745]
+[INFO] [moveit_collision-2]: process started with pid [81747]
+[INFO] [moveit_controller-1]: process started with pid [81749]
+[moveit_collision-2] [37;1m2022-01-17 18:05:40.977 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment de5c10c202ca562c: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[moveit_collision-2] [37;1m2022-01-17 18:05:40.977 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[moveit_collision-2] [WARN] [1642442740.992148590] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_collision-2] [INFO] [1642442740.998798964] [service_client]: Created service with name get_model_list
+[moveit_collision-2] [WARN] [1642442740.998907795] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_collision-2] [INFO] [1642442741.004294063] [service_client]: Created service with name get_entity_state
+[moveit_collision-2] [WARN] [1642442741.004406904] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_controller-1] [37;1m2022-01-17 18:05:41.013 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment ad4b77c061c3a753: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[moveit_controller-1] [37;1m2022-01-17 18:05:41.013 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[moveit_controller-1] [WARN] [1642442741.030316881] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_controller-1] Parsing robot urdf xml string.
+[moveit_controller-1] [INFO] [1642442741.037575412] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.000962802 seconds
+[moveit_controller-1] [INFO] [1642442741.037616622] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[moveit_controller-1] Link panda_link1 had 1 children
+[moveit_controller-1] Link panda_link2 had 1 children
+[moveit_controller-1] Link panda_link3 had 1 children
+[moveit_controller-1] Link panda_link4 had 1 children
+[moveit_controller-1] Link panda_link5 had 1 children
+[moveit_controller-1] Link panda_link6 had 1 children
+[moveit_controller-1] Link panda_link7 had 1 children
+[moveit_controller-1] Link panda_link8 had 1 children
+[moveit_controller-1] Link panda_hand had 2 children
+[moveit_controller-1] Link panda_leftfinger had 0 children
+[moveit_controller-1] Link panda_rightfinger had 0 children
+[moveit_controller-1] [INFO] [1642442741.061538634] [move_group_interface]: Ready to take commands for planning group panda_arm.
+[moveit_controller-1] [WARN] [1642442741.061637795] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_controller-1] [INFO] [1642442741.073895199] [move_group_interface]: Ready to take commands for planning group hand.
+[moveit_controller-1] [INFO] [1642442741.080349740] [move_group_interface]: Replanning: yes
+[moveit_controller-1] [INFO] [1642442741.080376230] [move_group_interface]: Replanning: yes
+[moveit_controller-1] [INFO] [1642442741.080389761] [service_client]: Created service with name set_target_active
+[moveit_controller-1] [WARN] [1642442741.080449841] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[moveit_controller-1] [INFO] [1642442741.084642525] [panda_moveit_controller]: Starting timer
+[moveit_controller-1] [INFO] [1642442741.085071000] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[spawner-1] [37;1m2022-01-17 18:05:41.436 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed to create segment 11c6d5919b5f50ba: boost::interprocess_exception::library_error[34;1m -> Function [36mcompute_per_allocation_extra_size[m
+[spawner-1] [37;1m2022-01-17 18:05:41.436 [31;1m[[37;1mRTPS_MSG_OUT[31;1m Error] [37mboost::interprocess_exception::library_error[34;1m -> Function [36minit[m
+[moveit_controller-1] [INFO] [1642442744.101340548] [panda_moveit_controller]: Chosen index is 10
+[moveit_controller-1] [INFO] [1642442744.101372368] [panda_moveit_controller]: Chosen target is solid(17)
+[moveit_controller-1] [INFO] [1642442744.101412849] [rclcpp]: Opening hand
+[move_group-3] [INFO] [1642442744.120950355] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442744.121140817] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442744.154911463] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442744.155117805] [moveit_ros.fix_start_state_bounds]: Starting state is just outside bounds (joint 'panda_finger_joint1'). Assuming within bounds.
+[move_group-3] [INFO] [1642442744.156055517] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442744.156777696] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442744.156808526] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442744.156852277] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442744.156889157] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442744.168419252] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 7 states (2 start + 5 goal)
+[move_group-3] [INFO] [1642442744.168440102] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 7 states (2 start + 5 goal)
+[move_group-3] [INFO] [1642442744.168470133] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 7 states (2 start + 5 goal)
+[move_group-3] [INFO] [1642442744.168561944] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 7 states (2 start + 5 goal)
+[move_group-3] [INFO] [1642442744.169189592] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.012790 seconds
+[move_group-3] [INFO] [1642442744.169374714] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442744.170281806] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 7 states (2 start + 5 goal)
+[move_group-3] [INFO] [1642442744.170720442] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001432 seconds
+[move_group-3] [INFO] [1642442744.178222146] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.007441 seconds and changed from 6 to 2 states
+[move_group-3] [INFO] [1642442744.182013053] [moveit.ros_planning.planning_pipeline]: Planning adapters have added states at index positions: [ 0 ]
+[move_group-3] [INFO] [1642442744.182499959] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442744.521542889] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442744.621875962] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442744.721992802] [move_group_interface]: time taken to generate plan: 0.0218789 seconds
+[moveit_controller-1] [INFO] [1642442744.722032883] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442744.722536919] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442744.722618960] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442744.722751551] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442744.738865875] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442744.738958556] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442744.739358241] [panda_hand_controller]: Received new action goal
+[move_group-3] [INFO] [1642442744.739611724] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[driver-2] [INFO] [1642442744.739419512] [panda_hand_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442744.739636204] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442745.022729110] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442748.258788217] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442748.258914668] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442748.360924232] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442748.361028213] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442748.726255802] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442748.826399564] [rclcpp]: Approaching
+[move_group-3] [INFO] [1642442748.826895150] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442748.826953561] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442748.848751355] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442748.849364973] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442748.849677247] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442748.849712367] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442748.849748428] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442748.849804498] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442748.891441382] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442748.891778667] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442748.891825567] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442748.892275333] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442748.892360934] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.042877 seconds
+[move_group-3] [INFO] [1642442748.892511356] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442748.893881544] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442748.893962215] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001542 seconds
+[move_group-3] [INFO] [1642442748.902368230] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.008376 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442748.904725950] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442749.327448213] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442749.427676016] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442749.527798856] [move_group_interface]: time taken to generate plan: 0.0529009 seconds
+[moveit_controller-1] [INFO] [1642442749.527845886] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442749.528120200] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442749.528174310] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442749.528226021] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442749.530950315] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442749.531018946] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442749.531170028] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442749.531200328] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442749.531309000] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442749.531329470] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442749.828406201] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442751.351244417] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442751.351313898] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442751.447449338] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442751.447542299] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442751.830767145] [move_group_interface]: Execute request success!
+[moveit_collision-2] [INFO] [1642442751.931209770] [rclcpp]: Object solid(17) has been set inactive
+[moveit_controller-1] [INFO] [1642442751.931396013] [rclcpp]: Obj solid(17) set inactive successfully
+[move_group-3] [INFO] [1642442751.932286794] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442751.932340675] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442751.938723784] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442751.939267461] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442751.939597615] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442751.939618086] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442751.939683216] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442751.939710347] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442751.963219284] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 6 states (4 start + 2 goal)
+[move_group-3] [INFO] [1642442751.963274155] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442751.963987354] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442751.967550888] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 7 states (5 start + 2 goal)
+[move_group-3] [INFO] [1642442751.967634019] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.028229 seconds
+[move_group-3] [INFO] [1642442751.967768481] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442751.969585054] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442751.969633574] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001938 seconds
+[move_group-3] [INFO] [1642442751.978353293] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.008680 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442751.979170793] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442752.332784477] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442752.432998549] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442752.533109490] [move_group_interface]: time taken to generate plan: 0.0389725 seconds
+[moveit_controller-1] [INFO] [1642442752.533154710] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442752.533450004] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442752.533500505] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442752.533540345] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442752.553148172] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442752.553206863] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442752.553325864] [panda_arm_controller]: Received new action goal
+[move_group-3] [INFO] [1642442752.553460616] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442752.553488146] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442752.553354245] [panda_arm_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442752.833732406] [move_group_interface]: Execute request accepted
+[move_group-3] [INFO] [1642442753.108554396] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[driver-2] [INFO] [1642442753.108502005] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442753.242712806] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442753.242802677] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442753.634855544] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442753.734987694] [rclcpp]: Closing Hand
+[move_group-3] [INFO] [1642442753.753273745] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442753.753338286] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442753.786746106] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442753.787139341] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442753.787534146] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442753.787570847] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442753.787601027] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442753.787640678] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442753.798580746] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442753.798603986] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442753.798625897] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442753.798646857] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442753.798748558] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.011419 seconds
+[move_group-3] [INFO] [1642442753.798877220] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442753.799380836] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442753.799445877] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.000639 seconds
+[move_group-3] [INFO] [1642442753.802367063] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.002885 seconds and changed from 4 to 2 states
+[move_group-3] [INFO] [1642442753.803981544] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442754.454030980] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442754.554236861] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442754.654355642] [move_group_interface]: time taken to generate plan: 0.0150822 seconds
+[moveit_controller-1] [INFO] [1642442754.654442754] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442754.654766188] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442754.654837589] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442754.654899409] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442754.660463939] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442754.660534550] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442754.660649231] [panda_hand_controller]: Received new action goal
+[move_group-3] [INFO] [1642442754.660775413] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[driver-2] [INFO] [1642442754.660676681] [panda_hand_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442754.660795203] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442754.954983057] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442756.122736904] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442756.122880996] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442756.223211838] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442756.223292929] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442756.556709309] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442756.656832659] [rclcpp]: Retracting
+[move_group-3] [INFO] [1642442756.657192494] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442756.657253785] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442756.683692988] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442756.684819052] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442756.685410839] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442756.685459620] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442756.685507981] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442756.685544791] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442756.707460987] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442756.707501727] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442756.707740430] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442756.708473509] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 6 states (2 start + 4 goal)
+[move_group-3] [INFO] [1642442756.708556650] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.023527 seconds
+[move_group-3] [INFO] [1642442756.708699522] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442756.711750721] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 6 states (3 start + 3 goal)
+[move_group-3] [INFO] [1642442756.711838132] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.003224 seconds
+[move_group-3] [INFO] [1642442756.721215780] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.009342 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442756.722184592] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442757.157784678] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442757.257998601] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442757.358111280] [move_group_interface]: time taken to generate plan: 0.0362576 seconds
+[moveit_controller-1] [INFO] [1642442757.358152751] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442757.358437645] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442757.358505305] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442757.358588006] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442757.360980667] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442757.361047818] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442757.361188430] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442757.361218290] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442757.361305871] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442757.361317471] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442757.658760177] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442757.913679967] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442757.913738508] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442758.047282361] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442758.047384452] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442758.359506772] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442758.459629662] [rclcpp]: Approaching
+[move_group-3] [INFO] [1642442758.460014067] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442758.460074628] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442758.467261119] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442758.467782246] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442758.468019589] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442758.468080340] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442758.468123050] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442758.468158211] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442758.489430648] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442758.489506679] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442758.489672571] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442758.490783635] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442758.490881196] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022969 seconds
+[move_group-3] [INFO] [1642442758.491013248] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442758.492816680] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442758.492896291] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001975 seconds
+[move_group-3] [INFO] [1642442758.495830668] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.002905 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442758.496944833] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442758.860303889] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442758.960489000] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442759.060608262] [move_group_interface]: time taken to generate plan: 0.0279467 seconds
+[moveit_controller-1] [INFO] [1642442759.060660302] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442759.060937296] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442759.061065258] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442759.061135218] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442759.087611301] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[driver-2] [INFO] [1642442759.087880015] [panda_arm_controller]: Received new action goal
+[move_group-3] [INFO] [1642442759.087676872] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442759.087909615] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442759.088071937] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442759.088099848] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442759.361187207] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442759.999986762] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442760.000065133] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442760.095312152] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442760.095393813] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442760.462362106] [move_group_interface]: Execute request success!
+[move_group-3] [INFO] [1642442760.562781851] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442760.562840732] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442760.583659584] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442760.584199040] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442760.584552565] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442760.584622626] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442760.584662656] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442760.584692846] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442760.606496111] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442760.606665513] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442760.607260050] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442760.607408152] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442760.607492293] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.023147 seconds
+[move_group-3] [INFO] [1642442760.607648725] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442760.609185504] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442760.609277365] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001719 seconds
+[move_group-3] [INFO] [1642442760.616967302] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.007656 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442760.617642861] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442760.963133992] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442761.063342333] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442761.163457745] [move_group_interface]: time taken to generate plan: 0.0326544 seconds
+[moveit_controller-1] [INFO] [1642442761.163497335] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442761.163784169] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442761.163852420] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442761.163918081] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442761.165293078] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442761.165350279] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442761.165474330] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442761.165503531] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442761.165586872] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442761.165602372] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442761.463996000] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442761.887199919] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442761.887782017] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442761.983030557] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442761.983130168] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442762.364944157] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442762.465082048] [rclcpp]: Opening Hand
+[move_group-3] [INFO] [1642442762.499363980] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442762.499425831] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442762.531650426] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442762.532032231] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442762.532360395] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442762.532396855] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442762.532450706] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442762.532481996] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442762.543161881] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442762.543288203] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442762.543611157] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442762.543807459] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 6 states (2 start + 4 goal)
+[move_group-3] [INFO] [1642442762.543937751] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.011760 seconds
+[move_group-3] [INFO] [1642442762.544113503] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442762.544819702] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442762.544915193] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.000916 seconds
+[move_group-3] [INFO] [1642442762.547849900] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.002896 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442762.549650633] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442763.400348517] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442763.500585550] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442763.600723860] [move_group_interface]: time taken to generate plan: 0.0157071 seconds
+[moveit_controller-1] [INFO] [1642442763.600780021] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442763.601113085] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442763.601188086] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442763.601245067] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442763.627121574] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442763.627200445] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442763.627323606] [panda_hand_controller]: Received new action goal
+[driver-2] [INFO] [1642442763.627351906] [panda_hand_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442763.627460618] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[move_group-3] [INFO] [1642442763.627475828] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442763.901460828] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442765.123029564] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442765.123089045] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442765.219313706] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442765.219400257] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442765.603366294] [move_group_interface]: Execute request success!
+[moveit_collision-2] [INFO] [1642442765.703744477] [rclcpp]: Object solid(17) has been set active
+[moveit_controller-1] [INFO] [1642442765.703889069] [rclcpp]: Obj solid(17) set active successfully
+[moveit_controller-1] [INFO] [1642442765.703919239] [rclcpp]: Retracting
+[move_group-3] [INFO] [1642442765.704162013] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442765.704225013] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442765.710567874] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442765.711108231] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442765.711477655] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442765.711508166] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442765.711552566] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442765.711582657] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442765.733181798] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442765.733714945] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442765.733742885] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442765.734010289] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442765.734115720] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022863 seconds
+[move_group-3] [INFO] [1642442765.734267902] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442765.735674289] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442765.735756880] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001593 seconds
+[move_group-3] [INFO] [1642442765.742350044] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.006561 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442765.742951942] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442766.204746187] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442766.304982060] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442766.405112092] [move_group_interface]: time taken to generate plan: 0.0311307 seconds
+[moveit_controller-1] [INFO] [1642442766.405165772] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442766.405447826] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442766.405494046] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442766.405533767] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442766.426350569] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442766.426416780] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442766.426546541] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442766.426583002] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442766.426668293] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442766.426690543] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442766.705720348] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442767.146527200] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442767.146581381] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442767.274471681] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442767.274565942] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442767.606740117] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442767.707243171] [panda_moveit_controller]: Cube in bound
+[moveit_controller-1] [INFO] [1642442767.707571385] [panda_moveit_controller]: Chosen index is 17
+[moveit_controller-1] [INFO] [1642442767.707590366] [panda_moveit_controller]: Chosen target is solid(6)
+[moveit_controller-1] [INFO] [1642442767.707627936] [rclcpp]: Opening hand
+[move_group-3] [INFO] [1642442767.730747218] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442767.730804599] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442767.760965648] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442767.761349923] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442767.761668317] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442767.761708597] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442767.761778018] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442767.761832369] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442767.772540144] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442767.772590615] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442767.772726187] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442767.772773777] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442767.772863068] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.011366 seconds
+[move_group-3] [INFO] [1642442767.773027050] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442767.773716029] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442767.773832860] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.000921 seconds
+[move_group-3] [INFO] [1642442767.773866921] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.000001 seconds and changed from 2 to 2 states
+[move_group-3] [INFO] [1642442767.774021643] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442768.231292763] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442768.331487684] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442768.431598515] [move_group_interface]: time taken to generate plan: 0.0124061 seconds
+[moveit_controller-1] [INFO] [1642442768.431641886] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442768.431902819] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442768.431973630] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442768.432025060] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442768.446481523] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442768.446556644] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442768.446676995] [panda_hand_controller]: Received new action goal
+[driver-2] [INFO] [1642442768.446723566] [panda_hand_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442768.446870148] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[move_group-3] [INFO] [1642442768.446890348] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442768.478807430] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442768.478959492] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442768.578247572] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442768.578341153] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442768.932441813] [move_group_interface]: Execute request accepted
+[moveit_controller-1] [INFO] [1642442769.032613465] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442769.132741827] [rclcpp]: Approaching
+[move_group-3] [INFO] [1642442769.133117272] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442769.133207823] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442769.162590742] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442769.163136418] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442769.163581424] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442769.163624985] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442769.163657165] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442769.163703716] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442769.175168350] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442769.185116847] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442769.185546522] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442769.185627213] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442769.185706254] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022392 seconds
+[move_group-3] [INFO] [1642442769.185851526] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442769.187043681] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442769.187125072] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001357 seconds
+[move_group-3] [INFO] [1642442769.195999153] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.008838 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442769.196631340] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442769.633641455] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442769.733844158] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442769.833961448] [move_group_interface]: time taken to generate plan: 0.0327183 seconds
+[moveit_controller-1] [INFO] [1642442769.834006288] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442769.834271192] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442769.834326002] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442769.834391523] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442769.838999763] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442769.839046933] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[move_group-3] [INFO] [1642442769.839368397] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442769.839396998] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442769.839174235] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442769.839217565] [panda_arm_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442770.134550914] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442770.979263394] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442770.979312305] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442771.103066053] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442771.103179054] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442771.435887555] [move_group_interface]: Execute request success!
+[moveit_collision-2] [INFO] [1642442771.536212100] [rclcpp]: Object solid(6) has been set inactive
+[moveit_controller-1] [INFO] [1642442771.536341121] [rclcpp]: Obj solid(6) set inactive successfully
+[move_group-3] [INFO] [1642442771.537097111] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442771.537162391] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442771.556335843] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442771.556846459] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442771.557167153] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442771.557220904] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442771.557257914] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442771.557285985] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442771.578926487] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442771.578960777] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442771.579352722] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442771.581575861] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442771.581653552] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.024653 seconds
+[move_group-3] [INFO] [1642442771.581794144] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442771.583509596] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442771.583589187] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001880 seconds
+[move_group-3] [INFO] [1642442771.589706823] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.006085 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442771.590289241] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442771.937492704] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442772.037696775] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442772.137816537] [move_group_interface]: time taken to generate plan: 0.0327495 seconds
+[moveit_controller-1] [INFO] [1642442772.137862868] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442772.138159631] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442772.138226252] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442772.138291443] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442772.146764610] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442772.146839071] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442772.146986883] [panda_arm_controller]: Received new action goal
+[move_group-3] [INFO] [1642442772.147221856] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442772.147246667] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442772.147015464] [panda_arm_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442772.438374553] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442772.734552664] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442772.734612124] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442772.860544110] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442772.860628281] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442773.239284292] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442773.339403412] [rclcpp]: Closing Hand
+[move_group-3] [INFO] [1642442773.350817286] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442773.350879537] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442773.382886380] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442773.383276115] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442773.383665790] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442773.383710751] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442773.383739481] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442773.383777061] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442773.394621328] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442773.394645509] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442773.394672589] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442773.394811241] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442773.394920922] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.011494 seconds
+[move_group-3] [INFO] [1642442773.395124585] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442773.395769523] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442773.395875484] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.000882 seconds
+[move_group-3] [INFO] [1642442773.400647414] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.004735 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442773.401509635] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442774.051596713] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442774.151797966] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442774.251912646] [move_group_interface]: time taken to generate plan: 0.0172596 seconds
+[moveit_controller-1] [INFO] [1642442774.251956637] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442774.252261081] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442774.252366972] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442774.252422533] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442774.259087177] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442774.259176118] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442774.259312990] [panda_hand_controller]: Received new action goal
+[driver-2] [INFO] [1642442774.259369881] [panda_hand_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442774.259452322] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[move_group-3] [INFO] [1642442774.259469322] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442774.552446623] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442775.727055589] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442775.727333102] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442775.821401516] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442775.821489128] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442776.154025066] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442776.254161538] [rclcpp]: Retracting
+[move_group-3] [INFO] [1642442776.254575313] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442776.254648944] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442776.279669939] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442776.280332527] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442776.280714972] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442776.280736792] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442776.280766912] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442776.280799663] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442776.302634499] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442776.302830412] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442776.303002704] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442776.303788114] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442776.303874225] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.023397 seconds
+[move_group-3] [INFO] [1642442776.304008736] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442776.305626927] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442776.305720138] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001789 seconds
+[move_group-3] [INFO] [1642442776.315643552] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.009893 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442776.316194539] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442776.755023096] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442776.855199239] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442776.955313780] [move_group_interface]: time taken to generate plan: 0.0352014 seconds
+[moveit_controller-1] [INFO] [1642442776.955360291] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442776.955656944] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442776.955734765] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442776.955787776] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442776.957069622] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[driver-2] [INFO] [1642442776.957272285] [panda_arm_controller]: Received new action goal
+[move_group-3] [INFO] [1642442776.957146083] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442776.957304655] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442776.957459797] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442776.957480167] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442777.255855296] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442777.543160756] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442777.543307738] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442777.639649990] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442777.639709521] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442777.956578632] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442778.056698954] [rclcpp]: Approaching
+[move_group-3] [INFO] [1642442778.057066368] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442778.057122129] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442778.063492909] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442778.063990375] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442778.064377060] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442778.064418841] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442778.064453531] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442778.064481442] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442778.086258677] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442778.086377238] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442778.086468709] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442778.086606111] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442778.086715082] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022603 seconds
+[move_group-3] [INFO] [1642442778.086868454] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442778.088326603] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442778.088410624] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001634 seconds
+[move_group-3] [INFO] [1642442778.093557288] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.005111 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442778.094563731] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442778.457400422] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442778.557593464] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442778.657710455] [move_group_interface]: time taken to generate plan: 0.0294727 seconds
+[moveit_controller-1] [INFO] [1642442778.657753286] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442778.658057790] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442778.658125060] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442778.658178761] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442778.678782961] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442778.678848042] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442778.678996243] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442778.679033814] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442778.679178776] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442778.679204666] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442778.958221011] [move_group_interface]: Execute request accepted
+[move_group-3] [INFO] [1642442779.883125912] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[driver-2] [INFO] [1642442779.883056831] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442780.019616141] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442780.019702182] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442780.359489182] [move_group_interface]: Execute request success!
+[move_group-3] [INFO] [1642442780.459962878] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442780.460026889] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442780.471076898] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442780.471576985] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442780.471852088] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442780.471877078] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442780.471916039] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442780.471963700] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442780.493569811] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442780.494082008] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442780.494162719] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442780.494288670] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442780.494372471] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022672 seconds
+[move_group-3] [INFO] [1642442780.494529063] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442780.495534726] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442780.495615277] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001191 seconds
+[move_group-3] [INFO] [1642442780.502268631] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.004586 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442780.502986101] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442780.860244080] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442780.960411032] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442781.060516644] [move_group_interface]: time taken to generate plan: 0.0285579 seconds
+[moveit_controller-1] [INFO] [1642442781.060564045] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442781.060859898] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442781.060931229] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442781.060996700] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442781.091825289] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442781.091904410] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[move_group-3] [INFO] [1642442781.092246904] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442781.092267484] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442781.092062422] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442781.092107572] [panda_arm_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442781.361101890] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442781.879900806] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442781.879951036] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442782.007507693] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442782.007594474] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442782.362008659] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442782.462132201] [rclcpp]: Opening Hand
+[move_group-3] [INFO] [1642442782.468092586] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442782.468161446] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442782.499072766] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442782.499585803] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'hand' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442782.499946307] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442782.499984628] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442782.500034698] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442782.500083119] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442782.510441610] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442782.511232260] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442782.511265000] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 6 states (2 start + 4 goal)
+[move_group-3] [INFO] [1642442782.511486993] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 6 states (2 start + 4 goal)
+[move_group-3] [INFO] [1642442782.511750336] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.011980 seconds
+[move_group-3] [INFO] [1642442782.511865948] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - hand/hand: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442782.512687698] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - hand/hand: Created 6 states (2 start + 4 goal)
+[move_group-3] [INFO] [1642442782.512809790] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001007 seconds
+[move_group-3] [INFO] [1642442782.515510733] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.002673 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442782.517128204] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442783.368993685] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442783.469226558] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442783.569343959] [move_group_interface]: time taken to generate plan: 0.0158011 seconds
+[moveit_controller-1] [INFO] [1642442783.569390480] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442783.569695714] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442783.569768535] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442783.569828275] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442783.601765757] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442783.601833408] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_hand_controller
+[driver-2] [INFO] [1642442783.601968900] [panda_hand_controller]: Received new action goal
+[move_group-3] [INFO] [1642442783.602112222] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_hand_controller started execution
+[move_group-3] [INFO] [1642442783.602122322] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442783.602007231] [panda_hand_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442783.869869005] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442785.058612921] [panda_hand_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442785.058669231] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_hand_controller successfully finished
+[move_group-3] [INFO] [1642442785.152678506] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442785.152785457] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442785.471235829] [move_group_interface]: Execute request success!
+[moveit_collision-2] [INFO] [1642442785.571623394] [rclcpp]: Object solid(6) has been set active
+[moveit_controller-1] [INFO] [1642442785.571800076] [rclcpp]: Obj solid(6) set active successfully
+[moveit_controller-1] [INFO] [1642442785.571820906] [rclcpp]: Retracting
+[move_group-3] [INFO] [1642442785.572024969] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442785.572093130] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442785.574176846] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442785.574715893] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442785.575072987] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442785.575121568] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442785.575171218] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442785.575201039] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442785.596671109] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442785.597083384] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442785.597273056] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442785.597319257] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442785.597411308] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.022554 seconds
+[move_group-3] [INFO] [1642442785.597543240] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442785.599246501] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442785.599323302] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001861 seconds
+[move_group-3] [INFO] [1642442785.606224660] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.006870 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442785.606928149] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442786.072439993] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442786.172626986] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442786.272729806] [move_group_interface]: time taken to generate plan: 0.0314034 seconds
+[moveit_controller-1] [INFO] [1642442786.272771997] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442786.273050750] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442786.273101571] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442786.273146912] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442786.286613671] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442786.286701022] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[driver-2] [INFO] [1642442786.286846964] [panda_arm_controller]: Received new action goal
+[driver-2] [INFO] [1642442786.286882934] [panda_arm_controller]: Accepted new action goal
+[move_group-3] [INFO] [1642442786.287015616] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[move_group-3] [INFO] [1642442786.287040306] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[moveit_controller-1] [INFO] [1642442786.573242632] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442787.068273589] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442787.068341520] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442787.167113665] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442787.167212306] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442787.474067891] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442787.574540767] [panda_moveit_controller]: Cube in bound
+[moveit_controller-1] [INFO] [1642442787.574560847] [panda_moveit_controller]: Going to start pose
+[move_group-3] [INFO] [1642442787.574787740] [moveit_move_group_default_capabilities.move_action_capability]: Received request
+[move_group-3] [INFO] [1642442787.574839940] [moveit_move_group_default_capabilities.move_action_capability]: executing..
+[move_group-3] [INFO] [1642442787.587040625] [moveit_move_group_default_capabilities.move_action_capability]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-3] [INFO] [1642442787.587584901] [moveit.ompl_planning.model_based_planning_context]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-3] [INFO] [1642442787.587933286] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442787.587957676] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442787.588005547] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442787.588038047] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442787.599334050] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442787.599683864] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (3 start + 2 goal)
+[move_group-3] [INFO] [1642442787.599709495] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442787.599808886] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[move_group-3] [INFO] [1642442787.599885307] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.012162 seconds
+[move_group-3] [INFO] [1642442787.600052039] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:220 - panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[move_group-3] [INFO] [1642442787.601469317] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:354 - panda_arm/panda_arm: Created 4 states (2 start + 2 goal)
+[move_group-3] [INFO] [1642442787.601554628] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/tools/multiplan/src/ParallelPlan.cpp:135 - ParallelPlan::solve(): Solution found by one or more threads in 0.001623 seconds
+[move_group-3] [INFO] [1642442787.609699719] [ompl]: /tmp/binarydeb/ros-foxy-ompl-1.5.0/src/ompl/geometric/src/SimpleSetup.cpp:179 - SimpleSetup: Path simplification took 0.008114 seconds and changed from 3 to 2 states
+[move_group-3] [INFO] [1642442787.610697792] [moveit_move_group_default_capabilities.move_action_capability]: Motion plan was computed succesfully.
+[moveit_controller-1] [INFO] [1642442787.975095244] [move_group_interface]: Planning request accepted
+[moveit_controller-1] [INFO] [1642442788.075284845] [move_group_interface]: Planning request complete!
+[moveit_controller-1] [INFO] [1642442788.175433727] [move_group_interface]: time taken to generate plan: 0.0220078 seconds
+[moveit_controller-1] [INFO] [1642442788.175468927] [rclcpp]: Plan 0 SUCCEEDED
+[move_group-3] [INFO] [1642442788.175742651] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Received goal request
+[move_group-3] [INFO] [1642442788.175818262] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution request received
+[move_group-3] [INFO] [1642442788.175885293] [moveit_ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.01
+[move_group-3] [INFO] [1642442788.198617390] [moveit_ros.trajectory_execution_manager]: Starting trajectory execution ...
+[move_group-3] [INFO] [1642442788.198714441] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to panda_arm_controller
+[move_group-3] [INFO] [1642442788.199004905] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: panda_arm_controller started execution
+[driver-2] [INFO] [1642442788.198841743] [panda_arm_controller]: Received new action goal
+[move_group-3] [INFO] [1642442788.199032915] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted!
+[driver-2] [INFO] [1642442788.198875173] [panda_arm_controller]: Accepted new action goal
+[moveit_controller-1] [INFO] [1642442788.475896113] [move_group_interface]: Execute request accepted
+[driver-2] [INFO] [1642442789.400622104] [panda_arm_controller]: Goal reached, success!
+[move_group-3] [INFO] [1642442789.401252692] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller panda_arm_controller successfully finished
+[move_group-3] [INFO] [1642442789.530936214] [moveit_ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...
+[move_group-3] [INFO] [1642442789.531034896] [moveit_move_group_default_capabilities.execute_trajectory_action_capability]: Execution completed: SUCCEEDED
+[moveit_controller-1] [INFO] [1642442789.877218828] [move_group_interface]: Execute request success!
+[moveit_controller-1] [INFO] [1642442789.977350000] [panda_moveit_controller]: Task executed successfully in 48892 ms
