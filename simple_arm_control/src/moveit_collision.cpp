@@ -141,10 +141,10 @@ int main(int argc, char **argv)
                 primitive.dimensions.resize(3);
                 if (obj.id == "table") // table
                 {
-                    primitive.dimensions[0] = 0.92;
-                    primitive.dimensions[1] = 0.5;
-                    primitive.dimensions[2] = 0.914;
-                    height = primitive.dimensions[1]; // reason is that rviz uses center of mass while webots table uses bottom position
+                    primitive.dimensions[0] = 1.5;
+                    primitive.dimensions[1] = 1;
+                    primitive.dimensions[2] = 0.6;
+                    height = primitive.dimensions[2]; // reason is that rviz uses center of mass while webots table uses bottom position
                 }
                 else // cube
                 {

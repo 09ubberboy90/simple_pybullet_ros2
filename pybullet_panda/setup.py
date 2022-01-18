@@ -25,7 +25,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "pybullet_panda=pybullet_panda.pybullet_panda:main"
+            "panda=pybullet_panda.panda:main"
         ],
     },
 )
