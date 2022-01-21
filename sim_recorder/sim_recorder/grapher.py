@@ -103,12 +103,14 @@ failure = 0
 maxtime = 0
 fmaxtime = 0
 total = 0
+start_time = 0;
 with open(os.path.join(os.path.dirname(__file__), "../data", folder, "run.txt")) as f:
     for el in f.readlines():
         splitted = el.split()
         if not "Timeout" == splitted[0]:
             runtime += int(splitted[4])/1000
             total += 1
+            start_time += int(splitted[-4])/1000
         if "Completed" == splitted[0]:
             success += 1
             if int(splitted[4])/1000 > maxtime:
@@ -120,6 +122,7 @@ with open(os.path.join(os.path.dirname(__file__), "../data", folder, "run.txt"))
 
     if total != 0:
         mean = runtime/total
+        start_time /= total
     else:
         mean = 0
     mean_square = 0
@@ -209,8 +212,9 @@ def create_figure(figname, printing=False):
                 axs.set_ylabel("CPU Usage (% of one core)")
         legend1 = axs.legend(bbox_to_anchor=(1, 1.1), loc="upper left")
         if success+failure != 0:
-            axs.axvline(x=mean, ls='--', color=colors[-2], label="Mean success")
-            axs.axvspan(mean-stddev, mean+stddev, alpha=0.2, color=colors[-2])
+            axs.axvline(x=mean+start_time, ls='--', color=colors[-2], label="Mean success")
+            axs.axvline(x=start_time, ls='--', color=colors[0], label="Task Start Time")
+            axs.axvspan(mean-stddev+start_time, mean+stddev+start_time, alpha=0.2, color=colors[-2])
 
         if failure != 0:
             axs.axvspan(maxtime, x[-1], alpha=0.2, color=colors[-1])
@@ -224,18 +228,19 @@ def create_figure(figname, printing=False):
 
         lines = axs.get_lines()
         if failure != 0:
-            legend2 = axs.legend([lines[-1], pmark], ['Average Runtime',
+            legend2 = axs.legend([lines[-1], lines[-2], pmark], ["Task Start Time",'Average Runtime',
                                                       "Failure Only"], loc="upper right", bbox_to_anchor=(1, 1.1))
         elif success+failure != 0:
             legend2 = axs.legend(
-                [lines[-1]], ['Average Runtime'], loc="upper right", bbox_to_anchor=(1, 1.1))
+                [lines[-1], lines[-2]], ["Task Start Time",'Average Runtime'], loc="upper right", bbox_to_anchor=(1, 1.1))
 
         axs.add_artist(legend1)
-        axs.set_xticks(list(axs.get_xticks())[1:-1] + [mean])
+        axs.set_xticks(list(axs.get_xticks())[1:-1] + [start_time, mean+start_time])
         labels = axs.get_xticklabels()
         for idx, el in enumerate(axs.get_xticks()):
             labels[idx] = f"{el:.2f}"
-        labels[-1] = f"\n{mean:.2f}"
+        labels[-1] = f"\n{mean+start_time:.2f}"
+        labels[-2] = f"\n{start_time:.2f}"
         axs.set_xticklabels(labels)
 
         if printing:

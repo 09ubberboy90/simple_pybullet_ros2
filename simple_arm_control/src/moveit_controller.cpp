@@ -45,32 +45,28 @@
 
 
 std::pair<const std::string, moveit_msgs::msg::CollisionObject> choose_target(moveit::planning_interface::PlanningSceneInterface *ps, std::set<std::string> * processed)
-{    
+{   
+    std::vector<std::string> keys;
+
+
     srand ( time(NULL) ); //initialize the random seed
-    auto collision_objects = ps->getObjects();
-
-    for (std::set<std::string>::iterator it = processed->begin(); it != processed->end(); it++) 
+    std::map<std::string, moveit_msgs::msg::CollisionObject> collision_objects;
+    do
     {
-        // Known as the erase remove idiom
-        collision_objects.erase(*it);
-    }
-    if (collision_objects.size() <= 0)
-    {
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-        return choose_target(ps, processed);
-    }
-    
-    int rand_index = rand() % (int) collision_objects.size();
+        collision_objects = ps->getObjects();
+        for (const auto& imap : collision_objects) {
+            if (!processed->count(imap.first))
+            {
+                keys.push_back(imap.first);
+            }
+        }
+    } while (collision_objects.size() <= 0);
+        
+    int rand_index = rand() % (int) keys.size();
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Chosen index is %d", rand_index);
-
-    auto chosen = *std::next(std::begin(collision_objects),rand_index-1);
-    if (chosen.first.empty())
-    {
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-        return choose_target(ps, processed);
-    }
-    
-    processed->emplace(chosen.first);
+    auto name = keys[rand_index];
+    auto chosen = * new std::pair<const std::string, moveit_msgs::msg::CollisionObject>(name, collision_objects.at(name));
+    processed->emplace(name);
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Chosen target is %s", chosen.first.c_str());
     return chosen;
 
@@ -90,12 +86,14 @@ int main(int argc, char **argv)
     ).detach();
     int acc = 0;
     int iter = 2;
+    std::set<std::string> processed{banned};
+    processed.emplace("table");
+    auto discard = choose_target(simple_moveit->get_planning_scene_interface(), &processed);
+
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Starting timer");
     auto start = std::chrono::steady_clock::now();
 
     auto start_pose = simple_moveit->get_move_group()->getCurrentPose().pose;
-    std::set<std::string> processed{banned};
-
     for (int i = 1; i <= iter; i++)
     {
         auto object = choose_target(simple_moveit->get_planning_scene_interface(), &processed);

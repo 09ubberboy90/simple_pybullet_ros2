@@ -4,11 +4,6 @@
 #include <functional>
 #include <stdlib.h>
 
-// using CallbackType = std::function<
-// void (
-//     const std::shared_ptr<typename ServiceT::Request>,
-//     std::shared_ptr<typename ServiceT::Response>)>;
-
 template <class T>
 class ServiceClient
 {
@@ -22,8 +17,6 @@ private:
     std::shared_ptr<rclcpp::Client<T>> client;
     std::string srv_name;
 };
-
-// template <> class ServiceClient <>{};
 
 template <class T>
 ServiceClient<T>::ServiceClient(std::string incoming_name)
