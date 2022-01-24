@@ -67,9 +67,9 @@ for el in tmp:
         types["cpu"].append(el)
 
 procs = defaultdict(lambda: defaultdict(list))
-
-for key, el in types.items():
-    for name in el:
+skipped = []
+for key in ["cpu", "ram"]:
+    for name in types[key]:
         existing = []
         with open(name) as f:
             for lines in f.readlines():
@@ -79,7 +79,7 @@ for key, el in types.items():
                 if "ruby" in p:
                     p = "ignition"
                 val = line[1:]
-                val = [float(x) for x in val if x]
+                val = np.array([float(x) for x in val if x])
                 counter = 0
                 new_p = p
                 while new_p in existing:
@@ -87,6 +87,8 @@ for key, el in types.items():
                     new_p = new_p + "_" + str(counter)
                 if counter != 0:
                     p = p+"_"+str(counter)
+                if np.all(val==0) and key == "cpu": ## Can't skip ram since cpu went first
+                    skipped.append(p)
                 procs[key][p].append(val)
                 existing.append(p)
 # colors = {}
@@ -104,6 +106,7 @@ maxtime = 0
 fmaxtime = 0
 total = 0
 start_time = 0;
+timeout = 0
 with open(os.path.join(os.path.dirname(__file__), "../data", folder, "run.txt")) as f:
     for el in f.readlines():
         splitted = el.split()
@@ -119,6 +122,9 @@ with open(os.path.join(os.path.dirname(__file__), "../data", folder, "run.txt"))
             failure += 1
             if int(splitted[4])/1000 > fmaxtime:
                 fmaxtime = int(splitted[4])/1000
+        if "Timeout" == splitted[0]:
+            timeout += 1
+
 
     if total != 0:
         mean = runtime/total
@@ -145,23 +151,24 @@ def create_figure(figname, printing=False):
     fig, axs = plt.subplots(2, figsize=(12, 8))
 
     for axs, (type, proc) in zip(axs, procs.items()):
-        cm_subsection = linspace(0.0, 1.0, len(
-            proc.values())+2)  # +2 to handle the span
-        colors = [cm.jet(x) for x in cm_subsection]
         sorted_dict = OrderedDict()
-
         keys = sorted(proc.keys())
         for key in keys:
-            sorted_dict[key] = proc[key]
-        # colors.reverse()
+            if not key in skipped:
+                sorted_dict[key] = proc[key]
+
+        cm_subsection = linspace(0.0, 1.0, len(
+            sorted_dict.values())+3)  # +2 to handle the span
+        colors = [cm.jet(x) for x in cm_subsection]
+
         total = None
         length = 0
         for ls in sorted_dict.values():
             tmp = max(map(len, ls))
             if tmp > length:
                 length = tmp
-        for color, (name, ls) in zip(colors, sorted_dict.items()):
-            arr = np.array([xi+[np.nan]*(length-len(xi)) for xi in ls])
+        for color, (name, ls) in zip(colors[1:], sorted_dict.items()):
+            arr = np.array([np.concatenate((np.full(length-len(xi), np.nan), xi)) for xi in ls])
             if "_win" in figname and type == "cpu": 
                 arr *= 8 ## acount for windows using full cpu usage vs linux and core
             if total is None:
@@ -212,27 +219,27 @@ def create_figure(figname, printing=False):
                 axs.set_ylabel("CPU Usage (% of one core)")
         legend1 = axs.legend(bbox_to_anchor=(1, 1.1), loc="upper left")
         if success+failure != 0:
-            axs.axvline(x=mean+start_time, ls='--', color=colors[-2], label="Mean success")
+            axs.axvline(x=mean+start_time, ls='--', color=colors[-3], label="Mean success")
             axs.axvline(x=start_time, ls='--', color=colors[0], label="Task Start Time")
-            axs.axvspan(mean-stddev+start_time, mean+stddev+start_time, alpha=0.2, color=colors[-2])
+            axs.axvspan(mean-stddev+start_time, mean+stddev+start_time, alpha=0.2, color=colors[-3])
 
-        if failure != 0:
-            axs.axvspan(maxtime, x[-1], alpha=0.2, color=colors[-1])
-        pmark = mpatches.Patch(facecolor=colors[-1],
+        if timeout != 0:
+            axs.axvspan(max(maxtime, fmaxtime), x[-1], alpha=0.2, color=colors[-1])
+        pmark = mpatches.Patch(facecolor=colors[-3],
                                edgecolor='white',
                                linestyle='--',
                                alpha=0.2,
-                               label='Failure Only')
+                               label='Standard Deviation')
         # axs.annotate(f"{mean:.1f}",
         #             xy=(mean-max(x)/40, -15), xycoords=("data", "axes points") )
 
         lines = axs.get_lines()
         if failure != 0:
-            legend2 = axs.legend([lines[-1], lines[-2], pmark], ["Task Start Time",'Average Runtime',
-                                                      "Failure Only"], loc="upper right", bbox_to_anchor=(1, 1.1))
+            legend2 = axs.legend([lines[-1], lines[-2], pmark], ["Task Start Time",'Mean Runtime',
+                                                      "Standard Deviation"], loc="upper right", bbox_to_anchor=(1, 1.1))
         elif success+failure != 0:
             legend2 = axs.legend(
-                [lines[-1], lines[-2]], ["Task Start Time",'Average Runtime'], loc="upper right", bbox_to_anchor=(1, 1.1))
+                [lines[-1], lines[-2]], ["Task Start Time",'Mean Runtime'], loc="upper right", bbox_to_anchor=(1, 1.1))
 
         axs.add_artist(legend1)
         axs.set_xticks(list(axs.get_xticks())[1:-1] + [start_time, mean+start_time])
