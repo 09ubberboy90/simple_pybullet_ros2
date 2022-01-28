@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "run_recording = sim_recorder.run_recording:main"
+            "run_recording = sim_recorder.run_recording:main",
         ],
     },
 )

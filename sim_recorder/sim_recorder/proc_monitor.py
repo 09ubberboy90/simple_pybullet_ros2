@@ -48,8 +48,8 @@ class ProcMonitor(Node):
 
         self.proc_nb = len(allowed)*2
 
-        self.cpu = np.empty((self.proc_nb, 100))
-        self.ram = np.empty((self.proc_nb, 100))#
+        self.cpu = np.full((self.proc_nb, 100), np.nan, dtype=np.float)
+        self.ram = np.full((self.proc_nb, 100), np.nan, dtype=np.float)#
         self.allowed = allowed
         self.capacity = {"cpu":100,"ram":100}
         self.size = 0
@@ -73,12 +73,11 @@ class ProcMonitor(Node):
                 proc.cpu_percent()  # discard value
                 proc.cpu_percent()  # discard value
                 self.counter += 1
-                print(f"{name}, {self.counter}")
 
     def add(self, array, type, pid, data):
         if self.size == self.capacity[type]:
             self.capacity[type] *= 4
-            newdata = np.empty((self.proc_nb, self.capacity[type]))
+            newdata = np.full((self.proc_nb, self.capacity[type]),np.nan, dtype=np.float)
             newdata[:,:self.size] = array
             array = newdata
         array[self.pids[pid][1]][self.size] = data
@@ -105,6 +104,7 @@ class ProcMonitor(Node):
 
 
     def dump_values(self):
+        print("dump_values")
         self.name = {}
         for pid, (name, _) in self.pids.items():
             new_p = name
@@ -115,7 +115,6 @@ class ProcMonitor(Node):
             if counter != 0:
                 name = name+"_"+str(counter)
             self.name[pid] = name
-        
         with open(self.path + f"/{self.sim_name}/cpu/cpu_{self.idx}.csv", "w") as f:
             for pid, (name, idx) in self.pids.items():
                 f.write(name + "," + ",".join(map(str, self.cpu[idx, :self.size].tolist())) + "\n")
@@ -130,12 +129,20 @@ class ProcMonitor(Node):
 def run(path, simulator="isaac", idx=0):
     rclpy.init(args=None)
     allowed = ['driver', 'mongod', 'move_group', 'moveit_collision', 'moveit_controller', 'python3', 
-                'robot_state_publisher','run_recording', 'rviz2', 'spawner', 'static_transform_publisher', 
-                'webots-bin', "ros2"]  # Needed since they start before recording starts
+                'robot_state_publisher','run_recording', 'rviz2', 'spawner', 'static_transform_publisher', "ros2"]  # Needed since they start before recording starts
     if simulator == "isaac":
         allowed.extend(["kit"])
+    if simulator == "webots":
+        allowed.extend(["webots-bin", "webots"])
+    if simulator == "ignition":
+        allowed.extend(["ruby"])
+    if simulator == "vrep":
+        allowed.extend(["vrep"])
+    if simulator == "pybullet":
+        allowed.extend(["vrep"])
     monitor = ProcMonitor(allowed, idx, simulator, path)
     signal.signal(signal.SIGINT, lambda sig, frame: monitor.dump_values())
     signal.signal(signal.SIGTERM, lambda sig, frame: monitor.dump_values())
+
     rclpy.spin(monitor)
     rclpy.shutdown()

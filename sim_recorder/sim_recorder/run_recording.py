@@ -40,8 +40,10 @@ import psutil
 
 try:
     import proc_monitor
+    import clock_logger
 except ModuleNotFoundError:
     from . import proc_monitor
+    from . import clock_logger
 
 import _thread
 import threading
@@ -49,7 +51,7 @@ import re
 class PyBullet():
     def __init__(self):
         self.name = "pybullet"
-        self.timeout = 300 # 6 minute
+        self.timeout = 600 # 10 minute
         self.commands = [
             "ros2 launch pybullet_panda stack_cubes.launch.py",
         ]
@@ -69,7 +71,10 @@ def kill_proc_tree(pids, procs, interrupt_event, including_parent=False):
         except:
             pass
     time.sleep(2)  # Wait for everything ot close to prevent broken_pipe
-    for proc in procs[:-1]:
+    for proc in procs[:2]:
+        os.kill(proc.pid,signal.SIGINT)
+        proc.terminate()
+    for proc in procs[2:]:
         proc.kill()
     time.sleep(2)  # Wait for everything ot close to prevent broken_pipe
 
@@ -86,11 +91,14 @@ def run_com(w, q, com):
     q.put(proc.pid)
 
 
-def run_recorder(q, interrupt_event, simulator, idx, path):
+def run_recorder(q, interrupt_event, simulator, idx, path, clock = False):
     task = threading.Thread(target=interrupt_handler, args=(interrupt_event,))
     task.start()
     try:
-        proc_monitor.run(simulator=simulator, idx=idx, path=path)
+        if clock:
+            clock_logger.run(simulator=simulator, idx=idx, path=path)
+        else:
+            proc_monitor.run(simulator=simulator, idx=idx, path=path)
     except Exception as e:
         print(e)
         q.put("Exit")
@@ -100,6 +108,8 @@ def generate_procs(simulator, commands, r, w, q, interrupt_event, idx, path):
     procs = []
     procs.append(Process(target=run_recorder, args=(
         q, interrupt_event, simulator, idx, path), daemon=True, name="Recorder"))
+    procs.append(Process(target=run_recorder, args=(
+        q, interrupt_event, simulator, idx, path, True), daemon=True, name="Clock"))
     for com in commands:
         procs.append(Process(target=run_com, args=(w, q, com), name=com))
     return procs
@@ -108,12 +118,13 @@ def generate_procs(simulator, commands, r, w, q, interrupt_event, idx, path):
 def start_proces(delay, procs, q):
     pids = []
     for _ in range(len(procs) - len(delay)):
-        delay.append(0)
+        delay.insert(0,0)
+        delay.insert(0,0)
     for idx, p in enumerate(procs):
         p.start()
         time.sleep(delay[idx])
 
-    for proc in range(len(procs)-1):
+    for proc in range(len(procs)-2):
         pids.append(q.get())
 
     return pids
@@ -123,7 +134,7 @@ def handler(signum, frame):
 
 def log(file, msg):
     print(msg)
-    file.write(msg + "\n")
+    file.write(msg)
     
 def run(sim, idx, path):
     r, w = Pipe()
@@ -146,33 +157,31 @@ def run(sim, idx, path):
                 f.write(text)
                 if "Starting timer" in text:
                     start_exec_time = time.time() - start_time
-                if "Task executed successfully" in text:
-                    timing = [int(s) for s in re.findall(r'\b\d+\b', text)][-1]
-                    log(out, f"Completed for {idx} in {timing} ms. Task started {start_exec_time*1000:.0f} ms after start")
-                    signal.alarm(0)
+                if "Task finished executing in" in text: 
+                    end_time = [int(s) for s in re.findall(r'\b\d+\b', text)][-1]
+                    log(out, f"Completed for {idx}: Total execution time {(time.time()-start_time)*1000:.0f} ms. Task started {start_exec_time*1000:.0f} ms after start and took {end_time} ms")
+                if "cubes placed correctly" in text:
+                    log(out, text.split(":")[-1])
+                    signal.alarm(0) 
                     kill_proc_tree(pids, procs, interrupt_event)
-                    return 1, 0
-                if "Task failed" in text: 
-                    numbers = [int(s) for s in re.findall(r'\b\d+\b', text)]
-                    log(out, f"Failed for {idx} in {numbers[-1]} ms with {numbers[-2]} cube stacked. Task started {start_exec_time*1000:.0f} ms after start")
-                    signal.alarm(0)
-                    kill_proc_tree(pids, procs, interrupt_event)
-                    return 0, 1
+                    return 0
         except:
-            log(out,f"Timeout for {idx}")
-            f.write("Timeout")
+            log(out,f"Timeout for {idx} after {time.time()-start_time} \n")
+            signal.alarm(0) 
             kill_proc_tree(pids, procs, interrupt_event)
-            return 0, 0
+            return 1
 
 
 def main(args=None):
-    succ = 0
     fail = 0
-
+    start_idx = 1
     sim = PyBullet()
 
     if len(sys.argv) == 2:
         iteration = int(sys.argv[1])
+    elif len(sys.argv) == 3:
+        iteration = int(sys.argv[1])
+        start_idx = int(sys.argv[2])
     else:
         iteration = 1
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -182,17 +191,16 @@ def main(args=None):
         os.mkdir(path+f"/{sim.name}/log")
         os.mkdir(path+f"/{sim.name}/ram")
         os.mkdir(path+f"/{sim.name}/cpu")
+        os.mkdir(path+f"/{sim.name}/clock")
     except Exception as e:
         print(e)
         print("Folder exist. Overwriting...")
     if os.path.exists(path+f"/{sim.name}/run.txt"):
         os.remove(path+f"/{sim.name}/run.txt")
 
-    for idx in range(1, iteration+1):
-        a, b = run(sim, idx, path)
-        succ += a
-        fail += b
-    print(f"Success {succ}; Failure {fail}; Timeout {iteration-(succ + fail)}")
+    for idx in range(start_idx, iteration+1):
+        fail += run(sim, idx, path)
+    print(f"Completed {iteration-fail}; Timeout {fail}")
 
 
 if __name__ == "__main__":

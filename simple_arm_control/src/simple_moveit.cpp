@@ -24,6 +24,8 @@ bool SimpleMoveIt::wait_for_exec(moveit::planning_interface::MoveGroupInterface 
         // 10 tries to plan otherwise give up
         bool success = (move_group->plan(plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
         RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Plan %d %s", i, success ? "SUCCEEDED" : "FAILED");
+        auto pose = move_group->getPoseTarget().pose.position;
+        RCLCPP_INFO(rclcpp::get_logger("simple_moveit"), "Finding a path to %f, %f, %f", pose.x, pose.y, pose.z);
 
         if (success)
         {

@@ -42,6 +42,9 @@ from matplotlib import pyplot as plt
 from numpy import linspace
 from numpy.lib.scimath import sqrt
 from scipy import signal
+from matplotlib.ticker import ScalarFormatter
+import re
+
 
 SMOOTH_INDEX = 21
 POLY_INDEX = 3
@@ -63,6 +66,8 @@ types = defaultdict(list)
 for el in tmp:
     if "ram" in el:
         types["ram"].append(el)
+    elif "clock" in el:
+        types["clock"].append(el)
     else:
         types["cpu"].append(el)
 
@@ -78,7 +83,7 @@ for key in ["cpu", "ram"]:
                 p = line[0]
                 if "ruby" in p:
                     p = "ignition"
-                val = line[1:]
+                val = line[2:] # skip first reading that is often eronous
                 val = np.array([float(x) for x in val if x])
                 counter = 0
                 new_p = p
@@ -98,53 +103,43 @@ for key in ["cpu", "ram"]:
 # colors = list(colors.values())
 # random.shuffle(colors)
 
-runtime = 0
 success = 0
-fruntime = 0
-failure = 0
 maxtime = 0
-fmaxtime = 0
-total = 0
 start_time = 0;
 timeout = 0
+number_re = re.compile(r'\b\d+\b')
+runtime = []
+
 with open(os.path.join(os.path.dirname(__file__), "../data", folder, "run.txt")) as f:
     for el in f.readlines():
-        splitted = el.split()
-        if not "Timeout" == splitted[0]:
-            runtime += int(splitted[4])/1000
-            total += 1
-            start_time += int(splitted[-4])/1000
-        if "Completed" == splitted[0]:
+        splitted  = el.split()[0]
+        numbers = [int(s) for s in re.findall(number_re, el)]
+        if "Completed" == splitted:
+            runtime.append(numbers[3]/1000)
+            start_time += numbers[2]/1000
             success += 1
-            if int(splitted[4])/1000 > maxtime:
-                maxtime = int(splitted[4])/1000
-        if "Failed" == splitted[0]:
-            failure += 1
-            if int(splitted[4])/1000 > fmaxtime:
-                fmaxtime = int(splitted[4])/1000
-        if "Timeout" == splitted[0]:
+            if numbers[3]/1000 > maxtime:
+                maxtime = numbers[3]/1000
+        if "Timeout" == splitted:
             timeout += 1
 
 
-    if total != 0:
-        mean = runtime/total
-        start_time /= total
-    else:
-        mean = 0
+if success != 0:
+    mean = sum(runtime) / success
+    start_time /= success
     mean_square = 0
-    f.seek(0)
-    for el in f.readlines():
-        if not "Timeout" == el.split()[0]:
-            val = int(el.split()[4])/1000
+    for el in runtime:
+        mean_square += pow(el-mean, 2)
+    stddev = sqrt(mean_square / success)
 
-            mean_square += pow(val-mean, 2)
-    if total != 0:
-        stddev = sqrt(mean_square / total)
-    else:
-        stddev = 0
+else:
+    mean = 0
+    stddev = 0
 
-print(f"Name & Success & Failure & Timeout & Average Runtime & Standart Deviation\\\\")
-print(f"{folder} & {success} & {failure} & {150-(success + failure)} & {mean:.2f} & {stddev:.2f} \\\\")
+maxtime+= start_time
+
+print(f"Name & Success & Timeout & Average Runtime & Standart Deviation\\\\")
+print(f"{folder} & {success} & {timeout} & {mean:.2f} & {stddev:.2f} \\\\")
 
 
 def create_figure(figname, printing=False):
@@ -170,7 +165,7 @@ def create_figure(figname, printing=False):
         for color, (name, ls) in zip(colors[1:], sorted_dict.items()):
             arr = np.array([np.concatenate((np.full(length-len(xi), np.nan), xi)) for xi in ls])
             if "_win" in figname and type == "cpu": 
-                arr *= 8 ## acount for windows using full cpu usage vs linux and core
+                arr /= 24 ## acount for windows using full cpu usage vs linux and core
             if total is None:
                 total = arr
             else:
@@ -185,8 +180,11 @@ def create_figure(figname, printing=False):
             y = [meanarr]
             if printing:
                 y = signal.savgol_filter(meanarr,
-                                     SMOOTH_INDEX,  # window size used for filtering
+                                     SMOOTH_INDEX,  # window size used for filtering    
                                      POLY_INDEX),  # order of fitted polynomial
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", category=RuntimeWarning)
+                y[0][y[0] < 0] = 0 # clamp to zero
             axs.plot(x, y[0], label=name, color=color)
 
             lower = meanarr-standard_dev
@@ -214,34 +212,58 @@ def create_figure(figname, printing=False):
             if type == "ram":
                 axs.set_ylabel("RAM usage (MB)")
                 axs.set_title("RAM usage against time")
+                axs.set_yscale('log')
+                axs.yaxis.set_major_formatter(ScalarFormatter())
+
             else:
                 axs.set_title("CPU usage against time")
                 axs.set_ylabel("CPU Usage (% of one core)")
-        legend1 = axs.legend(bbox_to_anchor=(1, 1.1), loc="upper left")
-        if success+failure != 0:
-            axs.axvline(x=mean+start_time, ls='--', color=colors[-3], label="Mean success")
-            axs.axvline(x=start_time, ls='--', color=colors[0], label="Task Start Time")
-            axs.axvspan(mean-stddev+start_time, mean+stddev+start_time, alpha=0.2, color=colors[-3])
+        # meanarr = np.mean(total, axis=0)
+        # sum_arr = np.sum(meanarr, axis=1)
+        # axs.plot(x, sum_arr, label="Total", color=colors[-2])
 
-        if timeout != 0:
-            axs.axvspan(max(maxtime, fmaxtime), x[-1], alpha=0.2, color=colors[-1])
-        pmark = mpatches.Patch(facecolor=colors[-3],
-                               edgecolor='white',
-                               linestyle='--',
-                               alpha=0.2,
-                               label='Standard Deviation')
-        # axs.annotate(f"{mean:.1f}",
-        #             xy=(mean-max(x)/40, -15), xycoords=("data", "axes points") )
+        legend1 = axs.legend(bbox_to_anchor=(1, 1.1), loc="upper left")
+        
+    
+        std_dev_diff = 0
+        timeout_diff = 0
+
+        if success != 0:
+            axs.axvline(x=mean+start_time, ls='--', color=colors[-2], label="Mean success")
+            axs.axvline(x=start_time, ls='--', color=colors[0], label="Task Start Time")
+            axs.axvspan(mean-stddev+start_time, min(mean+stddev+start_time, x[-1]), alpha=0.2, color=colors[-3])
+            std_dev_diff = (mean+stddev+start_time) - (mean-stddev+start_time)
+            std_dev_mark = mpatches.Patch(facecolor=colors[-3],
+                                edgecolor='white',
+                                linestyle='--',
+                                alpha=0.2,
+                                label='Standard Deviation')
+        
+        timeout_diff = x[-1] - maxtime
+        if timeout != 0 and timeout_diff > 0:
+            axs.axvspan(maxtime, x[-1], alpha=0.2, color=colors[-1])
+            timeout_mark = mpatches.Patch(facecolor=colors[-1],
+                        edgecolor='white',
+                        linestyle='--',
+                        alpha=0.2,
+                        label='Timeout Only')
 
         lines = axs.get_lines()
-        if failure != 0:
-            legend2 = axs.legend([lines[-1], lines[-2], pmark], ["Task Start Time",'Mean Runtime',
-                                                      "Standard Deviation"], loc="upper right", bbox_to_anchor=(1, 1.1))
-        elif success+failure != 0:
-            legend2 = axs.legend(
-                [lines[-1], lines[-2]], ["Task Start Time",'Mean Runtime'], loc="upper right", bbox_to_anchor=(1, 1.1))
+        lines_data = [lines[-1], lines[-2], ]
+        lines_legend = ["Task Start Time",'Mean Runtime',]
 
+        if std_dev_diff > 0:
+            lines_data.append(std_dev_mark)            
+            lines_legend.append("Standard Deviation")            
+
+
+        if timeout != 0 and timeout_diff > 0:
+            lines_data.append(timeout_mark)            
+            lines_legend.append("Timeout Only")       
+
+        legend2 = axs.legend(lines_data,lines_legend, loc="upper right", bbox_to_anchor=(1, 1.1))
         axs.add_artist(legend1)
+        axs.add_artist(legend2)
         axs.set_xticks(list(axs.get_xticks())[1:-1] + [start_time, mean+start_time])
         labels = axs.get_xticklabels()
         for idx, el in enumerate(axs.get_xticks()):
@@ -257,6 +279,8 @@ def create_figure(figname, printing=False):
                 maxi = np.nanmax(total, axis=0)
                 mini = np.nanmin(total, axis=0)
             a = np.nansum(meanarr, axis=1)
+            np.savetxt(os.path.join(os.path.dirname(__file__),
+                             f"../data/{folder}/total_{type}.txt"), a)
             b = np.nansum(maxi, axis=1)
             c = np.nansum(mini, axis=1)
             print(f"========={type}=========")
@@ -272,6 +296,55 @@ def create_figure(figname, printing=False):
     plt.savefig(os.path.join(os.path.dirname(__file__),
                              f"../data/{folder}/{figname}"), bbox_inches="tight")
 
+def create_clock_plot(figname):
+    arr = []
+    time = []
+    max_length = 0
+    fig, ax = plt.subplots()
+    for name in types["clock"]:
+        with open(name) as f:
+            tmp = f.readline().strip().split(",")
+            tmp2 = f.readline().strip().split(",")
+            realtime = np.array([int(i) for i in tmp])
+            simtime = np.array([int(i) for i in tmp2])
+        realtime -= realtime[0]
 
+        sim_delta = []
+        real_delta = []
+        for el in range(simtime.shape[0]-1):
+            sim_delta.append(simtime[el]-simtime[el+1])
+        for el in range(realtime.shape[0]-1):
+            real_delta.append(realtime[el]-realtime[el+1])    
+            
+        sim_delta = np.array(sim_delta)
+        real_delta = np.array(real_delta)
+
+        div = sim_delta/real_delta
+        if div.shape[0] > max_length:
+            max_length = div.shape[0]
+        arr.append(div)
+        time.append(realtime[:-1]/pow(10,9))
+
+    arr = np.array([np.concatenate((np.full(max_length-xi.shape[0], np.nan), xi)) for xi in arr])
+    time = np.array([np.concatenate((np.full(max_length-xi.shape[0], np.nan), xi)) for xi in time])
+    meanarr = np.nanmean(arr, axis=0)
+    y = signal.savgol_filter(meanarr,
+                            SMOOTH_INDEX,  # window size used for filtering    
+                            POLY_INDEX),  # order of fitted polynomial
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=RuntimeWarning)
+        y[0][y[0] < 0] = 0 # clamp to zero
+
+    ax.plot(np.nanmax(time, axis=0),y[0] ,label="Webots",)
+    
+    ax.legend()
+    ax.set_ylabel("Real time factor (%)")
+    ax.set_xlabel("Time(s)")
+
+    # ax.set_xticks([], [])
+    plt.savefig(os.path.join(os.path.dirname(__file__),
+                             f"../data/{folder}/{figname}"), bbox_inches="tight")
+
+# create_clock_plot(f"{folder}_clock.svg")
 create_figure(f"{folder}_smooth.svg", True)
 create_figure(f"{folder}_no_smooth.svg",)

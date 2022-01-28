@@ -9,7 +9,7 @@ from trajectory_follower import TrajectoryFollower
 from sensor_msgs.msg import JointState
 
 
-TIME_STEP = 0.05
+TIME_STEP = 0.01
 
 class PyBulletSim(Node):
 

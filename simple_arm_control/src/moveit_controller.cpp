@@ -54,7 +54,8 @@ std::pair<const std::string, moveit_msgs::msg::CollisionObject> choose_target(mo
     do
     {
         collision_objects = ps->getObjects();
-        for (const auto& imap : collision_objects) {
+        for (const auto& imap : collision_objects) 
+        {
             if (!processed->count(imap.first))
             {
                 keys.push_back(imap.first);
@@ -73,36 +74,85 @@ std::pair<const std::string, moveit_msgs::msg::CollisionObject> choose_target(mo
 }
 
 
+bool check_object_pose(geometry_msgs::msg::Pose * current_pose, geometry_msgs::msg::Pose * target_pose)
+{
+
+        if ((current_pose->position.x < target_pose->position.x - 0.05) || (target_pose->position.x + 0.05 < current_pose->position.x) ||
+            (current_pose->position.y < target_pose->position.y - 0.05) || (target_pose->position.y + 0.05 < current_pose->position.y)) 
+            // No need to check height since if its in position then it can only be on top of the other cube
+        {
+            RCLCPP_ERROR(rclcpp::get_logger("panda_moveit_controller"), "Cube is not in bound");
+            return false;
+        }
+        else
+        {
+            RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Cube in bound");
+            return true;
+        }
+
+}
+
+std::vector<std::string> extract_keys(std::map<std::string, geometry_msgs::msg::Pose> const& input_map) {
+  std::vector<std::string> retval;
+  for (auto const& element : input_map) {
+    retval.push_back(element.first);
+  }
+  return retval;
+}
+
 
 int main(int argc, char **argv)
 {
 
     rclcpp::init(argc, argv);
+    
     auto simple_moveit = std::make_shared<SimpleMoveIt>("panda_moveit_controller");
     // For current state monitor
+
     std::thread([&simple_moveit]() { 
         rclcpp::spin(simple_moveit);
         rclcpp::shutdown();}
     ).detach();
-    int acc = 0;
-    int iter = 2;
+    int correctly_placed = 0;
+    int still_in_place = 0;
+    int failure = 0;
+    int columns, height;
+    simple_moveit->get_parameter("columns", columns);
+    simple_moveit->get_parameter("height", height);
+    if (columns > 4)
+    {
+        RCLCPP_WARN(rclcpp::get_logger("panda_moveit_controller"), "Maximum of 4 columns allowed, clamping");
+        columns = 4;
+    }
+    if (height > 5)
+    {
+        RCLCPP_WARN(rclcpp::get_logger("panda_moveit_controller"), "Maximum of 5 cubes height, clamping");
+        height = 5;
+    }
+    
     std::set<std::string> processed{banned};
     processed.emplace("table");
+
+    std::map<std::string, geometry_msgs::msg::Pose> chosen_objs;
+
     auto discard = choose_target(simple_moveit->get_planning_scene_interface(), &processed);
 
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Starting timer");
     auto start = std::chrono::steady_clock::now();
 
     auto start_pose = simple_moveit->get_move_group()->getCurrentPose().pose;
-    for (int i = 1; i <= iter; i++)
+
+    float start_column_y = 0.0 - (columns-1) / 10.0; // force float division
+
+    for (int i = 0; i < columns * height; i++)
     {
         auto object = choose_target(simple_moveit->get_planning_scene_interface(), &processed);
 
         auto obj_name = object.first;
         auto collision_object = object.second;
+        auto pose = collision_object.primitive_poses[0];
         bool success = true;
         // set_service(service_node, client, true, obj_name); // advertise to collision
-        auto pose = collision_object.primitive_poses[0];
         Eigen::Quaternionf q = Eigen::AngleAxisf(3.14, Eigen::Vector3f::UnitX()) * Eigen::AngleAxisf(0, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(0.785, Eigen::Vector3f::UnitZ());
         pose.orientation.w = q.w();
         pose.orientation.x = q.x();
@@ -115,50 +165,51 @@ int main(int argc, char **argv)
 
         if (!success)
         {
-            //Handle failure
+            failure += 1;//Handle failure
         }
         
 
         pose.position.x = 0.5;
-        pose.position.y = 0.0;
-        pose.position.z = (0.4) + i*0.05; 
+        pose.position.y = start_column_y + (i / height)/10.0*2;
+        pose.position.z = (0.45) + (i % columns)*0.05; 
+        chosen_objs.emplace(obj_name, pose);
         
+        // RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "%d, %d, %f",i, height, (i / height)/10.0*2);
+        // RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Y : %f, Z: %f, %f, %d, %d",  pose.position.y,  pose.position.z, start_column_y, columns, height);
 
-        success = simple_moveit->place(obj_name, pose, 0.15);
+        success = simple_moveit->place(obj_name, pose);
 
         
         if (!success)
         {
-            //Handle failure
+            failure += 1; //Handle failure
         }
+        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // wait for it to settle
+
         collision_object = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name];
         auto new_pose = collision_object.primitive_poses[0];
 
-        if ((new_pose.position.x < pose.position.x - 0.05) || (pose.position.x + 0.05 < new_pose.position.x) ||
-            (new_pose.position.y < pose.position.y - 0.05) || (pose.position.y + 0.05 < new_pose.position.y)) 
-            // No need to check height since if its in position then it can only be on top of the other cube
+        if (check_object_pose(&new_pose, &pose))
         {
-            RCLCPP_ERROR(rclcpp::get_logger("panda_moveit_controller"), "Cube is not in bound");
+            correctly_placed += 1;
         }
-        else
-        {
-            RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Cube in bound");
-            acc += 1;
-        }
+        
+    
     }
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Going to start pose");
     simple_moveit->goto_pose(start_pose);
     auto end = std::chrono::steady_clock::now();
     auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-    if (acc == iter)
+    RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Task finished executing in %s ms", std::to_string(diff.count()).c_str());
+    std::this_thread::sleep_for(std::chrono::seconds(60));
+    auto collision_objects = simple_moveit->get_planning_scene_interface()->getObjects(extract_keys(chosen_objs));
+    for (const auto& imap : collision_objects)
     {
-        RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Task executed successfully in %s ms", std::to_string(diff.count()).c_str());
-    
+        if (check_object_pose(&collision_objects[imap.first].primitive_poses[0], &chosen_objs[imap.first]))
+        {
+            still_in_place += 1;
+        }
     }
-    else
-    {
-        RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Task failed with %d cube stacked in %s ms", acc, std::to_string(diff.count()).c_str());
-    }
-    
-
+    RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), 
+    "%d cubes placed correctly with %d cubes still in place out of %d. %d moveit failure",correctly_placed, still_in_place,columns*height, failure);
 }
