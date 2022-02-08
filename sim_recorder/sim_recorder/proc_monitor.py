@@ -139,7 +139,7 @@ def run(path, simulator="isaac", idx=0):
     if simulator == "vrep":
         allowed.extend(["vrep"])
     if simulator == "pybullet":
-        allowed.extend(["vrep"])
+        allowed.extend(["panda"])
     monitor = ProcMonitor(allowed, idx, simulator, path)
     signal.signal(signal.SIGINT, lambda sig, frame: monitor.dump_values())
     signal.signal(signal.SIGTERM, lambda sig, frame: monitor.dump_values())

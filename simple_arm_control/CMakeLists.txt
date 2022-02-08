@@ -38,15 +38,14 @@ ament_target_dependencies(moveit_controller
   simple_interface
   geometry_msgs
 )
-
-# add_executable(throw_moveit src/throw_moveit.cpp include/moveit.hpp)
-# ament_target_dependencies(throw_moveit
-#   rclcpp
-#   rclcpp_action
-#   control_msgs
-#   moveit_ros_planning_interface
-#   sim_action_server
-# )
+add_executable(moveit_throw_controller src/moveit_throw_controller.cpp src/simple_moveit.cpp include/service_handler.hpp include/shared.hpp)
+ament_target_dependencies(moveit_throw_controller
+  rclcpp
+  moveit_ros_planning_interface
+  gazebo_msgs
+  simple_interface
+  geometry_msgs
+)
 
 add_executable(moveit_collision src/moveit_collision.cpp include/service_handler.hpp include/shared.hpp)
 ament_target_dependencies(moveit_collision
@@ -65,23 +64,11 @@ if(BUILD_TESTING)
 endif()
 
 ## Install
-install(TARGETS moveit_controller  moveit_collision
+install(TARGETS moveit_controller moveit_collision moveit_throw_controller
   DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY include
   DESTINATION include/${PROJECT_NAME}/)
-  
-# install(
-#   TARGETS simple_arm_control
-#   EXPORT simple_arm_control     # <-- documentation prepends export_
-#   ARCHIVE DESTINATION lib
-#   LIBRARY DESTINATION lib
-#   RUNTIME DESTINATION bin
-#   INCLUDES DESTINATION include
-# )
-
-# ament_export_include_directories(include)
-# ament_export_libraries(simple_arm_control)
-  
+    
 ament_package()

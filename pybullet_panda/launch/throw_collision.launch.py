@@ -29,12 +29,12 @@ def load_yaml(package_name, file_path):
 
 def generate_launch_description():
     # planning_context
-    robot_description_config = load_file("pybullet_panda", 
-        os.path.join(
-            "urdf",
-            "panda.urdf",
-        )
-    )
+    robot_description_config = load_file("pybullet_panda",
+                                         os.path.join(
+                                             "urdf",
+                                             "panda.urdf",
+                                         )
+                                         )
     robot_description = {"robot_description": robot_description_config}
 
     robot_description_semantic_config = load_file(
@@ -48,16 +48,19 @@ def generate_launch_description():
         "moveit_resources_panda_moveit_config", "config/kinematics.yaml"
     )
 
-    moveit_controller = Node(name='moveit_controller',
-                               package='simple_arm_control',
-                               executable='moveit_controller',
-                               output='screen',
-                               parameters=[robot_description,
-                                           robot_description_semantic,
-                                           kinematics_yaml,
-                                           {"height": 2, "columns" : 3},
-                                           ],
-                            #   prefix=['gdbserver localhost:3000']
+    sim_spawner = Node(name='sim_spawner',
+                            package='sim_spawner',
+                            executable='throw_spawner',
+                            output='screen')
+
+    moveit_collision = Node(name='moveit_collision',
+                            package='simple_arm_control',
+                            executable='moveit_collision',
+                            output='screen',
+                            parameters=[robot_description,
+                                        robot_description_semantic,
+                                        kinematics_yaml, ],
+                            # prefix=['gdbserver localhost:3000'],
                             )
-    
-    return LaunchDescription([moveit_controller])
+
+    return LaunchDescription([sim_spawner, moveit_collision])

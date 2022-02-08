@@ -42,38 +42,6 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include "simple_interface/srv/set_object_active.hpp"
 
-
-
-std::pair<const std::string, moveit_msgs::msg::CollisionObject> choose_target(moveit::planning_interface::PlanningSceneInterface *ps, std::set<std::string> * processed)
-{   
-    std::vector<std::string> keys;
-
-
-    srand ( time(NULL) ); //initialize the random seed
-    std::map<std::string, moveit_msgs::msg::CollisionObject> collision_objects;
-    do
-    {
-        collision_objects = ps->getObjects();
-        for (const auto& imap : collision_objects) 
-        {
-            if (!processed->count(imap.first))
-            {
-                keys.push_back(imap.first);
-            }
-        }
-    } while (collision_objects.size() <= 0);
-        
-    int rand_index = rand() % (int) keys.size();
-    RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Chosen index is %d", rand_index);
-    auto name = keys[rand_index];
-    auto chosen = * new std::pair<const std::string, moveit_msgs::msg::CollisionObject>(name, collision_objects.at(name));
-    processed->emplace(name);
-    RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Chosen target is %s", chosen.first.c_str());
-    return chosen;
-
-}
-
-
 bool check_object_pose(geometry_msgs::msg::Pose * current_pose, geometry_msgs::msg::Pose * target_pose)
 {
 
@@ -113,103 +81,70 @@ int main(int argc, char **argv)
         rclcpp::spin(simple_moveit);
         rclcpp::shutdown();}
     ).detach();
-    int correctly_placed = 0;
-    int still_in_place = 0;
+    int moved = 0;
     int failure = 0;
-    int columns, height;
-    simple_moveit->get_parameter("columns", columns);
-    simple_moveit->get_parameter("height", height);
-    if (columns > 4)
-    {
-        RCLCPP_WARN(rclcpp::get_logger("panda_moveit_controller"), "Maximum of 4 columns allowed, clamping");
-        columns = 4;
-    }
-    if (height > 5)
-    {
-        RCLCPP_WARN(rclcpp::get_logger("panda_moveit_controller"), "Maximum of 5 cubes height, clamping");
-        height = 5;
-    }
     
     std::set<std::string> processed{banned};
     processed.emplace("table");
+    processed.emplace("target");
 
-    std::map<std::string, geometry_msgs::msg::Pose> chosen_objs;
-
-    auto discard = choose_target(simple_moveit->get_planning_scene_interface(), &processed);
+    std::map<std::string, moveit_msgs::msg::CollisionObject> poses;
+    do
+    {
+        poses = simple_moveit->get_planning_scene_interface()->getObjects();
+    } while (poses.size() <= 0);
 
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Starting timer");
     auto start = std::chrono::steady_clock::now();
 
     auto start_pose = simple_moveit->get_move_group()->getCurrentPose().pose;
+    auto obj_name = "target";
+    auto collision_object = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name];
 
-    float start_column_y = 0.0 - (columns-1) / 10.0; // force float division
+    auto pose = collision_object.primitive_poses[0];
+    bool success = true;
+    // set_service(service_node, client, true, obj_name); // advertise to collision
+    Eigen::Quaternionf q = Eigen::AngleAxisf(3.14, Eigen::Vector3f::UnitX()) * Eigen::AngleAxisf(0, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(0.785, Eigen::Vector3f::UnitZ());
+    pose.orientation.w = q.w();
+    pose.orientation.x = q.x();
+    pose.orientation.y = q.y();
+    pose.orientation.z = q.z();
+    pose.position.z += 0.1;
 
-    for (int i = 0; i < columns * height; i++)
+
+    success = simple_moveit->pick(obj_name, pose);
+
+    if (!success)
     {
-        auto object = choose_target(simple_moveit->get_planning_scene_interface(), &processed);
-
-        auto obj_name = object.first;
-        auto collision_object = object.second;
-        auto pose = collision_object.primitive_poses[0];
-        bool success = true;
-        // set_service(service_node, client, true, obj_name); // advertise to collision
-        Eigen::Quaternionf q = Eigen::AngleAxisf(3.14, Eigen::Vector3f::UnitX()) * Eigen::AngleAxisf(0, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(0.785, Eigen::Vector3f::UnitZ());
-        pose.orientation.w = q.w();
-        pose.orientation.x = q.x();
-        pose.orientation.y = q.y();
-        pose.orientation.z = q.z();
-        pose.position.z += 0.1;
-
-
-        success = simple_moveit->pick(obj_name, pose);
-
-        if (!success)
-        {
-            failure += 1;//Handle failure
-        }
-        
-
-        pose.position.x = 0.5;
-        pose.position.y = start_column_y + (i / height)/10.0*2;
-        pose.position.z = (0.45) + (i % columns)*0.05; 
-        chosen_objs.emplace(obj_name, pose);
-        
-        // RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "%d, %d, %f",i, height, (i / height)/10.0*2);
-        // RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Y : %f, Z: %f, %f, %d, %d",  pose.position.y,  pose.position.z, start_column_y, columns, height);
-
-        success = simple_moveit->place(obj_name, pose);
-
-        
-        if (!success)
-        {
-            failure += 1; //Handle failure
-        }
-        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // wait for it to settle
-
-        collision_object = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name];
-        auto new_pose = collision_object.primitive_poses[0];
-
-        if (check_object_pose(&new_pose, &pose))
-        {
-            correctly_placed += 1;
-        }
-        
-    
+        failure += 1;//Handle failure
     }
+    
+    success = simple_moveit->throw_obj(obj_name);
+
+    
+    if (!success)
+    {
+        failure += 1; //Handle failure
+    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // wait for it to settle
+
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Going to start pose");
     simple_moveit->goto_pose(start_pose);
     auto end = std::chrono::steady_clock::now();
     auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "Task finished executing in %s ms", std::to_string(diff.count()).c_str());
     std::this_thread::sleep_for(std::chrono::seconds(60));
-    auto collision_objects = simple_moveit->get_planning_scene_interface()->getObjects(extract_keys(chosen_objs));
+    auto collision_objects = simple_moveit->get_planning_scene_interface()->getObjects();
+
     for (const auto& imap : collision_objects)
     {
-        if (check_object_pose(&collision_objects[imap.first].primitive_poses[0], &chosen_objs[imap.first]))
+        if (!check_object_pose(&collision_objects[imap.first].primitive_poses[0], &poses[imap.first].primitive_poses[0]))
         {
-            still_in_place += 1;
+            moved += 1;
         }
     }
+    auto new_pose = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name].primitive_poses[0];
+
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), 
-    "%d cubes placed correctly with %d cubes still in place out of %d. %d moveit failure",correctly_placed, still_in_place,columns*height, failure);
+    "%d cubes moved out of 6. Original cube %s. %d moveit failure",moved, check_object_pose(&new_pose, &pose) ? "still in place" : "moved", failure);
 }

@@ -50,14 +50,12 @@ def generate_launch_description():
 
     moveit_controller = Node(name='moveit_controller',
                                package='simple_arm_control',
-                               executable='moveit_controller',
+                               executable='moveit_throw_controller',
                                output='screen',
                                parameters=[robot_description,
                                            robot_description_semantic,
                                            kinematics_yaml,
-                                           {"height": 2, "columns" : 3},
                                            ],
-                            #   prefix=['gdbserver localhost:3000']
                             )
     
     return LaunchDescription([moveit_controller])

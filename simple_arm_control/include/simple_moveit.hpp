@@ -52,11 +52,14 @@ public:
     bool place(std::string name, geometry_msgs::msg::Pose pose, double approach_distance = 0.1);
     bool goto_pose(geometry_msgs::msg::Pose pose);
     bool goto_pose(moveit::planning_interface::MoveGroupInterface *move_group, geometry_msgs::msg::Pose pose);
+    bool goto_joint_pose(moveit::planning_interface::MoveGroupInterface *move_group, sensor_msgs::msg::JointState joints);
     bool change_gripper(gripper_state state);
     moveit::planning_interface::MoveGroupInterface *get_move_group() { return &move_group; }
     moveit::planning_interface::MoveGroupInterface *get_hand_move_group() { return &hand_move_group; }
     moveit::planning_interface::PlanningSceneInterface *get_planning_scene_interface() { return &planning_scene_interface; }
     bool set_obj_active(std::string name, bool set_active);
+    bool throw_obj(std::string name, double release_percentage = 0.5 );
+
 
 private:
     moveit::planning_interface::MoveGroupInterface move_group;
