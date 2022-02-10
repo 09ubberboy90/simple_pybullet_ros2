@@ -280,7 +280,7 @@ def create_figure(figname, printing=False):
                 mini = np.nanmin(total, axis=0)
             a = np.nansum(meanarr, axis=1)
             np.savetxt(os.path.join(os.path.dirname(__file__),
-                             f"../data/{folder}/total_{type}.txt"), a)
+                             f"../data/{folder}/{folder}_total_{type}.txt"), a)
             b = np.nansum(maxi, axis=1)
             c = np.nansum(mini, axis=1)
             print(f"========={type}=========")
@@ -335,7 +335,7 @@ def create_clock_plot(figname):
         warnings.simplefilter("ignore", category=RuntimeWarning)
         y[0][y[0] < 0] = 0 # clamp to zero
 
-    ax.plot(np.nanmax(time, axis=0),y[0] ,label="Webots",)
+    ax.plot(np.nanmax(time, axis=0),y[0] ,label=f"{folder}",)
     
     ax.legend()
     ax.set_ylabel("Real time factor (%)")
@@ -345,6 +345,6 @@ def create_clock_plot(figname):
     plt.savefig(os.path.join(os.path.dirname(__file__),
                              f"../data/{folder}/{figname}"), bbox_inches="tight")
 
-# create_clock_plot(f"{folder}_clock.svg")
+create_clock_plot(f"{folder}_clock.svg")
 create_figure(f"{folder}_smooth.svg", True)
 create_figure(f"{folder}_no_smooth.svg",)

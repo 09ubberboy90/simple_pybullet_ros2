@@ -55,7 +55,7 @@ def generate_launch_description():
                                parameters=[robot_description,
                                            robot_description_semantic,
                                            kinematics_yaml,
-                                           {"height": 2, "columns" : 3},
+                                           {"height": 5, "columns" : 3},
                                            ],
                             #   prefix=['gdbserver localhost:3000']
                             )

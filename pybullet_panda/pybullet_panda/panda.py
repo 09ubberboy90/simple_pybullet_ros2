@@ -17,7 +17,7 @@ class PyBulletSim(Node):
         super().__init__('PyBulletSim')
         self.publisher = self.create_publisher(JointState, "/joint_states", 10)
         self.timer = self.create_timer(TIME_STEP, self.step)
-        self.physicsClient = p.connect(p.GUI_SERVER)#or p.DIRECT for non-graphical version
+        self.physicsClient = p.connect(p.SHARED_MEMORY_SERVER)#or p.DIRECT for non-graphical version
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
         p.setGravity(0,0,-9.8)
         self.planeId = p.loadURDF("plane.urdf")

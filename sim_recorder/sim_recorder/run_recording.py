@@ -56,9 +56,6 @@ class PyBullet():
             "ros2 launch pybullet_panda stack_cubes.launch.py",
         ]
         self.delays = [5] #added the timer delay from launch file + 10 s for robot movement
-
-
-
 def kill_proc_tree(pids, procs, interrupt_event, including_parent=False):
     interrupt_event.set()
     for pid in pids:
@@ -73,7 +70,7 @@ def kill_proc_tree(pids, procs, interrupt_event, including_parent=False):
     time.sleep(2)  # Wait for everything ot close to prevent broken_pipe
     for proc in procs[:2]:
         os.kill(proc.pid,signal.SIGINT)
-        proc.terminate()
+        # proc.terminate()
     for proc in procs[2:]:
         proc.kill()
     time.sleep(2)  # Wait for everything ot close to prevent broken_pipe
@@ -185,16 +182,32 @@ def main(args=None):
     else:
         iteration = 1
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    path = os.path.join(dir_path, "..")
+    try:
+        os.mkdir(path+"/data")
+    except:
+        pass
     path = os.path.join(dir_path, "..", "data")
     try:
         os.mkdir(path+f"/{sim.name}")
-        os.mkdir(path+f"/{sim.name}/log")
-        os.mkdir(path+f"/{sim.name}/ram")
-        os.mkdir(path+f"/{sim.name}/cpu")
-        os.mkdir(path+f"/{sim.name}/clock")
     except Exception as e:
-        print(e)
-        print("Folder exist. Overwriting...")
+        pass
+    try:
+        os.mkdir(path+f"/{sim.name}/log")
+    except Exception as e:
+        pass
+    try:
+        os.mkdir(path+f"/{sim.name}/ram")
+    except Exception as e:
+        pass
+    try:
+        os.mkdir(path+f"/{sim.name}/cpu")
+    except Exception as e:
+        pass
+    try:
+        os.mkdir(path+f"/{sim.name}/clock")
+    except:
+        pass
     if os.path.exists(path+f"/{sim.name}/run.txt"):
         os.remove(path+f"/{sim.name}/run.txt")
 
