@@ -17,8 +17,9 @@ class PyBulletSim(Node):
         super().__init__('PyBulletSim')
         self.publisher = self.create_publisher(JointState, "/joint_states", 10)
         self.timer = self.create_timer(TIME_STEP, self.step)
-        gui = self.get_parameter('gui').get_parameter_value()
-        print(gui)
+        self.declare_parameter('gui', False)
+
+        gui = self.get_parameter('gui').get_parameter_value().bool_value
         if gui:
             self.physicsClient = p.connect(p.GUI_SERVER)#or p.DIRECT for non-graphical version
         else:
