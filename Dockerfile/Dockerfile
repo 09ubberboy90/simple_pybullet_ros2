@@ -70,4 +70,4 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["sh", "-c", "ros2 run sim_recorder run_recording ${ARGS}"] 
+CMD ["sh", "-c", "ros2 run sim_recorder run_recording -i 20 ${ARGS}"] 
