@@ -51,7 +51,7 @@ import threading
 import re
 class Pybullet():
     def __init__(self, gui=False):
-        self.name = "pybullet"
+        self.name = "pybullet" + ("_gui" if gui else "")
         self.timeout = 900 # 15 minute
         self.commands = [
             f"ros2 launch pybullet_panda stack_cubes.launch.py gui:={str(gui).lower()}"
