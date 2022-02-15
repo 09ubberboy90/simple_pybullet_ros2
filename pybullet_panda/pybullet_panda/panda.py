@@ -17,7 +17,7 @@ class PyBulletSim(Node):
         super().__init__('PyBulletSim')
         self.publisher = self.create_publisher(JointState, "/joint_states", 10)
         self.timer = self.create_timer(TIME_STEP, self.step)
-        self.declare_parameter('gui', False)
+        self.declare_parameter('gui', True)
 
         gui = self.get_parameter('gui').get_parameter_value().bool_value
         if gui:

@@ -23,15 +23,15 @@ class SpawnerNode(Node):
         self.model = self.create_service(
             GetModelList, 'get_model_list', self.get_model_list)
         self.objs = {}
-        self.spawn_obj("cube.urdf", position=[1.5,0.065,0.025])
         
         self.spawn_obj("cube.urdf", position=[0.5,0.0,0.025], param_name="target") # target must be second to spawn
 
-        self.spawn_obj("cube.urdf", position=[1.5,0.0,0.025])
-        self.spawn_obj("cube.urdf", position=[1.5,-0.065,0.025])
-        self.spawn_obj("cube.urdf", position=[1.5,-0.0335,0.075])
-        self.spawn_obj("cube.urdf", position=[1.5,0.0335,0.075])
-        self.spawn_obj("cube.urdf", position=[1.5,0.0,0.135])
+        self.spawn_obj("cube.urdf", position=[1.4,0.065,0.025])
+        self.spawn_obj("cube.urdf", position=[1.4,0.0,0.025])
+        self.spawn_obj("cube.urdf", position=[1.4,-0.065,0.025])
+        self.spawn_obj("cube.urdf", position=[1.4,-0.0335,0.075])
+        self.spawn_obj("cube.urdf", position=[1.4,0.0335,0.075])
+        self.spawn_obj("cube.urdf", position=[1.4,0.0,0.135])
 
 
     def spawn_obj(self, path, position=[0, 0, 0], rotation = [0,0,0,1], scale = 0.05, param_name=None):
