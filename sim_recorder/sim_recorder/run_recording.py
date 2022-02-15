@@ -51,10 +51,10 @@ import threading
 import re
 class Pybullet():
     def __init__(self, gui=False):
-        self.name = "pybullet" + ("_gui" if gui else "")
+        self.name = "pybullet_throw" + ("_gui" if gui else "")
         self.timeout = 900 # 15 minute
         self.commands = [
-            f"ros2 launch pybullet_panda stack_cubes.launch.py gui:={str(gui).lower()}"
+            f"ros2 launch pybullet_panda throw_cubes.launch.py gui:={str(gui).lower()}"
         ]
         self.delays = [5] #added the timer delay from launch file
 
@@ -159,7 +159,7 @@ def run(sim, idx, path):
                 if "Task finished executing in" in text: 
                     end_time = [int(s) for s in re.findall(r'\b\d+\b', text)][-1]
                     log(out, f"Completed for {idx}: Total execution time {(time.time()-start_time)*1000:.0f} ms. Task started {start_exec_time*1000:.0f} ms after start and took {end_time} ms")
-                if "cubes placed correctly" in text:
+                if "cubes placed correctly" in text or "cubes moved out" in text:
                     log(out, text.split(":")[-1])
                     signal.alarm(0) 
                     kill_proc_tree(pids, procs, interrupt_event)
