@@ -130,15 +130,15 @@ def run(path, simulator="isaac", idx=0):
     rclpy.init(args=None)
     allowed = ['driver', 'mongod', 'move_group', 'moveit_collision', 'moveit_controller', 'python3', 
                 'robot_state_publisher','run_recording', 'rviz2', 'spawner', 'static_transform_publisher', "ros2"]  # Needed since they start before recording starts
-    if simulator == "isaac":
+    if "isaac" in simulator:
         allowed.extend(["kit"])
-    if simulator == "webots":
+    if "webots" in simulator:
         allowed.extend(["webots-bin", "webots"])
-    if simulator == "ignition":
+    if "ignition" in simulator:
         allowed.extend(["ruby"])
-    if simulator == "vrep":
-        allowed.extend(["vrep"])
-    if simulator == "pybullet":
+    if "vrep" in simulator:
+        allowed.extend(["coppeliaSim", "vrep_control"])
+    if "pybullet" in simulator:
         allowed.extend(["panda"])
     monitor = ProcMonitor(allowed, idx, simulator, path)
     signal.signal(signal.SIGINT, lambda sig, frame: monitor.dump_values())
