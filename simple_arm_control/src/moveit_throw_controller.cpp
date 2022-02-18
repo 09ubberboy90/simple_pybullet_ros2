@@ -160,10 +160,6 @@ int main(int argc, char **argv)
     auto new_pose = simple_moveit->get_planning_scene_interface()->getObjects({obj_name})[obj_name].primitive_poses[0];
 
     auto target_moved = check_object_pose(&new_pose, &pose);
-    if (target_moved)
-    {
-        moved-= 1;
-    }
     
     RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), 
     "%d cubes moved out of 6. Original cube %s. %d moveit failure",moved, target_moved ? "is still in place" : "moved", failure);
