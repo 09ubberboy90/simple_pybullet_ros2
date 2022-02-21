@@ -9,7 +9,7 @@ This task involves one Franka Panda robotic arm randomly taking 5cm cubes from a
 ## Throw Task
 ![Throw Task](https://github.com/09ubberboy90/simple_webot_ros2/blob/bbe24b34e19a651f0feb8c4047790903ab244baa/imgs/Webots_throw.png "Throw Task ")
 
-For this, a Franka Panda arm will pick up a cube and throw it toward a pyramid made of 6 cubes. The arm will go as far back as it can and perform a throwing motion toward the ground in front of it. The ball will be released at 50% of the trajectory as it is the moment with the most amount of forces. The pyramid is placed such that a successful throw at full power will collapse it. However in Ignition the cube drops when the arm is as far back as possible
+For this, a Franka Panda arm will pick up a cube and throw it toward a pyramid made of 6 cubes. The arm will go as far back as it can and perform a throwing motion toward the ground in front of it. The ball will be released at 50% of the trajectory as it is the moment with the most amount of forces. The pyramid is placed such that a successful throw at full power will collapse it. 
 
 ## Instructions
 
