@@ -54,7 +54,7 @@ class Pybullet():
         self.name = "pybullet" +("_throw" if throw else "") + ("_gui" if gui else "")
         self.timeout = 900 if not throw else 600 # 15 minute
         self.commands = [
-            f"ros2 launch pybullet_panda throw_cubes.launch.py gui:={str(gui).lower()}"
+            f"ros2 launch pybullet_panda {'throw' if throw else 'stack'}_cubes.launch.py gui:={str(gui).lower()}"
         ]
         self.delays = [5] #added the timer delay from launch file
 
