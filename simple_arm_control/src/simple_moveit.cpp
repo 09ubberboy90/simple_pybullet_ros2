@@ -157,8 +157,8 @@ bool SimpleMoveIt::throw_obj(std::string name, double release_percentage )
                     0.0,
                     3.6,
                     0.8};
-    move_group.setMaxVelocityScalingFactor(0.5);
-    move_group.setMaxAccelerationScalingFactor(0.5);
+    move_group.setMaxVelocityScalingFactor(0.1);
+    move_group.setMaxAccelerationScalingFactor(0.1);
 
     // Go back 
     goto_joint_pose(&move_group, joints);

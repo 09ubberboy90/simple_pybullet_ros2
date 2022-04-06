@@ -171,7 +171,7 @@ int main(int argc, char **argv)
 
         pose.position.x = 0.5;
         pose.position.y = start_column_y + (i / height)/10.0*2;
-        pose.position.z = (0.45) + (i % columns)*0.05; 
+        pose.position.z = (0.45) + (i % height)*0.05; 
         chosen_objs.emplace(obj_name, pose);
         
         // RCLCPP_INFO(rclcpp::get_logger("panda_moveit_controller"), "%d, %d, %f",i, height, (i / height)/10.0*2);
