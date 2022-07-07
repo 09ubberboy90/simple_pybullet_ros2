@@ -1,6 +1,6 @@
 # simple_pybullet_ros2
 
-This repository contains 2 tasks for Webots  
+This repository contains 2 tasks for Pybullet  
 
 ## Stacking Task
 ![Stacking Cube task](https://github.com/09ubberboy90/simple_webot_ros2/blob/bbe24b34e19a651f0feb8c4047790903ab244baa/imgs/Webots_place.png "Stacking Cube task")
